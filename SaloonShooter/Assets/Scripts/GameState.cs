@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour {
     public int m_level;
 
     //GameObjects
-    [SerializeField] GameObject m_enemy;
+    [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
     List<EnemyMain> m_enemies = new List<EnemyMain>();
@@ -33,7 +33,7 @@ public class GameState : MonoBehaviour {
 
     public void SpawnEnemy(Vector3 _pos)
     {
-        GameObject newEnemy = (GameObject)Instantiate(m_enemy, _pos, Quaternion.identity);
+        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
         m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
