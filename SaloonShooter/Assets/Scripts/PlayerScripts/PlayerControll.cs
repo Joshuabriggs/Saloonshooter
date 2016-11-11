@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControll : MonoBehaviour {
 
     public float MovementSpeed=5.0f; //How fast does the player move
     public float HideHeight = 20.0f; //How low does the player hide
