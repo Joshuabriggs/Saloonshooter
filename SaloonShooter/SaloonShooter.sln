@@ -1,7 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{9257CE81-854A-DD96-7B90-8C695369F759}") = "SaloonShooter", "Assembly-CSharp.csproj", "{E323EF87-A33B-A837-D887-FBA7F5625251}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E323EF87-A33B-A837-D887-FBA7F5625251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
