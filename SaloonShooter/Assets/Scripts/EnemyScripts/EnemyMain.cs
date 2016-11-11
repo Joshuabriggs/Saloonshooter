@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyMain : MonoBehaviour
 {
-
+    int m_health = 10;
     private int m_path;
     [SerializeField]
     private float m_deviation = 60f;

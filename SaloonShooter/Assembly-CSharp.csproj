@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy1.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy2.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyBulletScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyMain.cs" />
      <Compile Include="Assets\Scripts\EnemySpawning.cs" />
      <Compile Include="Assets\Scripts\FireProjectile.cs" />
      <Compile Include="Assets\Scripts\GUI\Crosshair.cs" />
