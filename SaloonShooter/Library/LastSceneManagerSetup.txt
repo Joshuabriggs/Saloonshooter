@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/rduih.unity
+- path: Assets/Scenes/Callum.unity
   isLoaded: 1
   isActive: 1
