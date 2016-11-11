@@ -7,6 +7,8 @@ public class Enemy1 : MonoBehaviour {
     public bool m_run;
     private Transform m_transform;
     private Rigidbody m_body;
+    private bool m_isdead;
+    private float m_deathtimer;
 
     // Use this for initialization
     void Start () {
@@ -14,6 +16,8 @@ public class Enemy1 : MonoBehaviour {
         m_transform = transform;
         m_body = GetComponent<Rigidbody>();
         m_run = false;
+        m_isdead = false;
+        m_deathtimer = 100f;
 	
 	}
 
@@ -21,17 +25,31 @@ public class Enemy1 : MonoBehaviour {
     void Update()
     {
 
-        if (GetComponent<EnemyMain>().m_travelling == 2)
+        if (m_isdead == false)
         {
-            if (m_attacktimer <= 0)
+            if (GetComponent<EnemyMain>().m_travelling == 2)
             {
-                m_body.AddForce(new Vector3(0, 100f, 0));
-                m_attacktimer = 30f;
+                if (m_attacktimer <= 0)
+                {
+                    m_body.AddForce(new Vector3(0, 500f, -500f));
+                    m_attacktimer = 90f;
+                    m_isdead = true;
+                }
+
+                m_transform.eulerAngles = new Vector3(0, 0, 0);
+
+                m_attacktimer -= 1;
             }
+        }
 
-            m_transform.eulerAngles = new Vector3(0, 0, 0);
+        else
+        {
+            m_deathtimer--;
 
-            m_attacktimer -= 1;
+            if (m_deathtimer <= 0)
+            {
+                DestroyObject(gameObject);
+            }
         }
     }
 
