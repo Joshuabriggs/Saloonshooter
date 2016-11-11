@@ -9,7 +9,7 @@ public class Crosshair : MonoBehaviour {
 
     void Start()
     {
-        //Cursor.visible = false;
+        Cursor.visible = false;
         position = new Rect((Screen.width - crosshairTexture.width) / 2, (Screen.height - crosshairTexture.height) / 2, crosshairTexture.width, crosshairTexture.height);
     }
 
