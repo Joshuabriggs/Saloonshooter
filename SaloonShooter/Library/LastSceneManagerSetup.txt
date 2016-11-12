@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Matt.unity
-=======
-- path: Assets/Scenes/Game.unity
->>>>>>> origin/master
+- path: Assets/Scenes/Callum-New.unity
   isLoaded: 1
   isActive: 1

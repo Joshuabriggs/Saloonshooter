@@ -40,6 +40,10 @@ public class Projectile : MonoBehaviour {
                 }
                 Destroy(gameObject);
                 break;
+
+            case "Player":
+                GameState.instance.UpdateHealth(-5f);
+                break;
     }
 
         

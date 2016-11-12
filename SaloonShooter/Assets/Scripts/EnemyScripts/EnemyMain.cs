@@ -14,6 +14,7 @@ public class EnemyMain : MonoBehaviour
     private float m_traveldistance;
     private float m_distancetraveled;
     private Vector3 m_startLocation;
+    private Vector3 m_startRotation;
     [HideInInspector]
     public int m_travelling;
     private int m_enemytype;
@@ -32,6 +33,7 @@ public class EnemyMain : MonoBehaviour
         m_travelling = 1;
         m_body = GetComponent<Rigidbody>();
         m_player = GameObject.Find("PlayerBody");
+        m_startRotation = new Vector3(0, 180, 0);
 
         if (gameObject.name == "Enemy1" || gameObject.name == "Enemy1(Clone)")
         {
@@ -44,7 +46,7 @@ public class EnemyMain : MonoBehaviour
         if (gameObject.name == "Enemy2" || gameObject.name == "Enemy2(Clone)")
         {
             m_enemytype = 2;
-            m_traveldistance = Random.Range(10, 30);
+            m_traveldistance = Random.Range(15, 30);
             m_startLocation = m_transform.position;
             m_health = 10f;
         }
@@ -93,7 +95,7 @@ public class EnemyMain : MonoBehaviour
     void Moving()
     {
 
-        m_distancetraveled = m_transform.position.z - m_startLocation.z;
+        m_distancetraveled = m_startLocation.z - m_transform.position.z;
 
         if (m_distancetraveled >= m_traveldistance)
         {
@@ -110,12 +112,12 @@ public class EnemyMain : MonoBehaviour
             {
                 if (m_path == 1)
                 {
-                    m_transform.eulerAngles = new Vector3(0, 45);
+                    m_transform.eulerAngles = m_startRotation + new Vector3(0, -45);
                 }
 
                 if (m_path == 3)
                 {
-                    m_transform.eulerAngles = new Vector3(0, -45);
+                    m_transform.eulerAngles = m_startRotation + new Vector3(0, 45);
                 }
 
                 m_deviation -= 1;
@@ -123,20 +125,20 @@ public class EnemyMain : MonoBehaviour
 
             if (m_deviation <= 0)
             {
-                m_transform.eulerAngles = new Vector3(0, 0, 0);
+                m_transform.eulerAngles = m_startRotation;
             }
 
-            m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
+            m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime, Space.Self);
         }
 
-        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
 
     }
 
     void Moving2()
     {
 
-        m_distancetraveled = m_transform.position.z - m_startLocation.z;
+        m_distancetraveled = m_startLocation.z - m_transform.position.z;
 
         if (m_distancetraveled >= m_traveldistance)
         {
@@ -146,12 +148,12 @@ public class EnemyMain : MonoBehaviour
         {
             if (m_path == 1)
             {
-                m_transform.eulerAngles = new Vector3(0, 45);
+                m_transform.eulerAngles = m_startRotation + new Vector3(0, -45);
             }
 
             if (m_path == 3)
             {
-                m_transform.eulerAngles = new Vector3(0, -45);
+                m_transform.eulerAngles = m_startRotation + new Vector3(0, 45);
             }
 
             m_deviation -= 1;
@@ -159,10 +161,11 @@ public class EnemyMain : MonoBehaviour
 
         if (m_deviation <= 0)
         {
-            m_transform.eulerAngles = new Vector3(0, 0, 0);
+            m_transform.eulerAngles = m_startRotation;
         }
 
-        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime, Space.Self);
+
     }
 
     void Attacking()
@@ -181,12 +184,12 @@ public class EnemyMain : MonoBehaviour
         {
             if (m_path == 1)
             {
-                m_transform.eulerAngles = new Vector3(0, 45);
+                m_transform.eulerAngles = m_startRotation + new Vector3(0, 45);
             }
 
             if (m_path == 2)
             {
-                m_transform.eulerAngles = new Vector3(0, -45);
+                m_transform.eulerAngles = m_startRotation + new Vector3(0, -45);
             }
 
             m_deviation -= 1;

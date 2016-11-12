@@ -30,7 +30,7 @@ public class Enemy2 : MonoBehaviour {
     void Update()
     {
 
-        m_shotSpawn = m_guntransform.position + new Vector3(0, 0, 1);
+        m_shotSpawn = m_guntransform.position + new Vector3(0, 0, -1);
 
         if (GetComponent<EnemyMain>().m_travelling == 2)
         {
