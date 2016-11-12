@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour {
 
     int m_score;
     public int m_level;
+    int m_health = 50;
 
     //GameObjects
     [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
@@ -41,6 +42,12 @@ public class GameState : MonoBehaviour {
     {
         m_enemies.Remove(_enemy);
         Destroy(_enemy.gameObject);
+    }
+
+    public void HitEnemy(EnemyMain _enemy, float _damage)
+    {
+        _enemy.ChangeHealth(_damage);
+        Debug.Log("Enemy was hit!");
     }
 
     public static GameState instance = null;

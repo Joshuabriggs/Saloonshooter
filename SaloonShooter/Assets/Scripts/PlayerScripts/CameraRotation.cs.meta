@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SaloonShooter/Assets/Scripts/PlayerScripts/MouseLook.cs.meta
+guid: 1046b3a617dae0d43abb0223c09d3a76
+=======
 guid: cb6c003da0345fe41b58e5a781deef31
+>>>>>>> origin/master:SaloonShooter/Assets/Scripts/PlayerScripts/CameraRotation.cs.meta
 timeCreated: 1478890173
 licenseType: Pro
 MonoImporter:

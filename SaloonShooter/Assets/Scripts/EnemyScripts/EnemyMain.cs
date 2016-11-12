@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyMain : MonoBehaviour
 {
-    int m_health = 10;
+    public float m_health;
     private int m_path;
     [SerializeField]
     private float m_deviation = 60f;
@@ -19,6 +19,9 @@ public class EnemyMain : MonoBehaviour
     private int m_enemytype;
     private Transform m_transform;
     private Rigidbody m_body;
+    private GameObject m_player;
+    private Vector3 m_relativePos;
+    private Quaternion m_rotation;
 
     // Use this for initialization
     void Start()
@@ -28,17 +31,22 @@ public class EnemyMain : MonoBehaviour
         m_path = Random.Range(1, 4);
         m_travelling = 1;
         m_body = GetComponent<Rigidbody>();
+        m_player = GameObject.Find("PlayerBody");
 
         if (gameObject.name == "Enemy1" || gameObject.name == "Enemy1(Clone)")
         {
             m_enemytype = 1;
-            
+            m_health = 10f;
+            m_traveldistance = 40f;
+            m_startLocation = m_transform.position;
+
         }
         if (gameObject.name == "Enemy2" || gameObject.name == "Enemy2(Clone)")
         {
             m_enemytype = 2;
-            m_traveldistance = Random.Range(15, 50);
+            m_traveldistance = Random.Range(10, 30);
             m_startLocation = m_transform.position;
+            m_health = 10f;
         }
 
     }
@@ -76,7 +84,8 @@ public class EnemyMain : MonoBehaviour
 
         if (m_health <= 0)
         {
-            Destroy(gameObject);
+            GameState.instance.DestroyEnemy(this);
+            Debug.Log("Enemy is dead :(");
         }
 
     }
@@ -84,29 +93,43 @@ public class EnemyMain : MonoBehaviour
     void Moving()
     {
 
+        m_distancetraveled = m_transform.position.z - m_startLocation.z;
 
-
-        if (m_deviation >= 1)
+        if (m_distancetraveled >= m_traveldistance)
         {
-            if (m_path == 1)
-            {
-                m_transform.eulerAngles = new Vector3(0, 45);
-            }
-
-            if (m_path == 3)
-            {
-                m_transform.eulerAngles = new Vector3(0, -45);
-            }
-
-            m_deviation -= 1;
+            m_relativePos = m_player.transform.position - m_transform.position;
+            m_rotation = Quaternion.LookRotation(m_relativePos);
+            m_transform.rotation = m_rotation;
+            m_speed = 20f;
         }
 
-        if (m_deviation <= 0)
+        else
         {
-            m_transform.eulerAngles = new Vector3(0, 0, 0);
+
+            if (m_deviation >= 1)
+            {
+                if (m_path == 1)
+                {
+                    m_transform.eulerAngles = new Vector3(0, 45);
+                }
+
+                if (m_path == 3)
+                {
+                    m_transform.eulerAngles = new Vector3(0, -45);
+                }
+
+                m_deviation -= 1;
+            }
+
+            if (m_deviation <= 0)
+            {
+                m_transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
+            m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
         }
 
-        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
 
     }
 
@@ -139,13 +162,16 @@ public class EnemyMain : MonoBehaviour
             m_transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
     }
 
     void Attacking()
     {
-        
+        m_relativePos = m_player.transform.position - m_transform.position;
+        m_rotation = Quaternion.LookRotation(m_relativePos);
+        m_transform.rotation = m_rotation;
 
+       
     }
 
     void Avoid()
@@ -191,6 +217,11 @@ public class EnemyMain : MonoBehaviour
         }
 
 
+    }
+
+    public void ChangeHealth(float m_change)
+    {
+        m_health -= m_change;
     }
 }
 
