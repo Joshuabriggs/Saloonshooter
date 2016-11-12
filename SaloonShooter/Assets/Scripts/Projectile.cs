@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour {
                 break;
 
             case "Player":
-                GameState.instance.PlayerHit(5f);
+                GameState.instance.UpdateHealth(-5f);
                 break;
     }
 
