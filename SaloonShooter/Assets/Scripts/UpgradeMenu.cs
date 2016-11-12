@@ -35,4 +35,9 @@ public class UpgradeMenu : MonoBehaviour {
 
     }
 
+    public void OnTurretCreate()
+    {
+
+    }
+
 }
