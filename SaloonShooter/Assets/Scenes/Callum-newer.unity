@@ -20408,6 +20408,9 @@ MonoBehaviour:
   m_wave: 0
   m_maxHealth: 50
   reloadTime: 1
+  m_rRealoadTime: 5
+  m_currentWeapon: 1
+  m_shotCount: 6
   m_enemyPrefabs:
   - {fileID: 181750, guid: 368e72f98faddd048bb2995d1d55bb90, type: 2}
   m_enemies: []
@@ -20555,6 +20558,14 @@ Prefab:
       propertyPath: maximumX
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 11466946, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+      propertyPath: bProjectile
+      value: 
+      objectReference: {fileID: 175198, guid: 1e38941597106344c95cd4ee6f20fe4e, type: 2}
+    - target: {fileID: 11466946, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+      propertyPath: rProjectile
+      value: 
+      objectReference: {fileID: 173228, guid: a82c47c82897d6344a95f2bbeb85bfe5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
   m_IsPrefabParent: 0
