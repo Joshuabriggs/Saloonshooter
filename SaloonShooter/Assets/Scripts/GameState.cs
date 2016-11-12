@@ -8,6 +8,7 @@ public class GameState : MonoBehaviour {
     int m_score;
     public int m_level;
     float m_health = 50;
+    float m_maxHealth = 50f;
 
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
@@ -65,6 +66,12 @@ public class GameState : MonoBehaviour {
     {
         m_healthBar.fillAmount = m_health / 50f;
         m_healthText.text = "" + (int)m_health;
+
+        if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
+        {
+            m_healthBar.material.color = Color.red;
+        }
+
     }
 
     public void AddScore(int _delta)
