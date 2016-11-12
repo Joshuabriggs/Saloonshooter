@@ -125,10 +125,10 @@ public class EnemyMain : MonoBehaviour
                 m_transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
-            m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
+            m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
         }
 
-        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
 
     }
 
@@ -161,7 +161,7 @@ public class EnemyMain : MonoBehaviour
             m_transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime);
+        m_transform.Translate(new Vector3(0, 0, -1) * m_speed * Time.deltaTime);
     }
 
     void Attacking()
