@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy1.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy2.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyBoss.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyBulletScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyMain.cs" />
      <Compile Include="Assets\Scripts\EnemySpawning.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerControll.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\UpgradeMenu.cs" />
      <Compile Include="Assets\Scripts\Wave.cs" />
      <None Include="Assets\Scripts\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Scripts\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
