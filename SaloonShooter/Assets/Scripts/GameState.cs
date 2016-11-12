@@ -8,8 +8,11 @@ public class GameState : MonoBehaviour {
 
     int m_score;
     public int m_wave;
+
+    //Player stats
     float m_health = 50;
-    float m_maxHealth = 50f;
+    public float m_maxHealth = 50f;
+    public float reloadTime = 1f;
 
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
@@ -66,7 +69,7 @@ public class GameState : MonoBehaviour {
     public void UpdateHealthUI()
     {
         m_healthBar.fillAmount = m_health / 50f;
-        m_healthText.text = "" + (int)m_health;
+        m_healthText.text = (int)m_health + "/" + m_maxHealth;
 
         if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
         {
