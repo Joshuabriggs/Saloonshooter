@@ -13,6 +13,10 @@ public class GameState : MonoBehaviour {
     float m_health = 50;
     public float m_maxHealth = 50f;
     public float reloadTime = 1f;
+    public float m_rRealoadTime = 5f;
+    public int m_currentWeapon = 1;
+    public int m_shotCount = 6;
+
 
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
@@ -63,6 +67,11 @@ public class GameState : MonoBehaviour {
 
         }
 
+    }
+
+    public void ChangeWeapon(int _choice)
+    {
+        
     }
 
     public void UpdateReloadBar(float _amount)
