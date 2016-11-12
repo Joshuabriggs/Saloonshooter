@@ -20722,6 +20722,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - enemiesInWave: 00000000000000000000000000000000
+    spawnInterval: 2
+  - enemiesInWave: 000000000000000000000000000000000000000000000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
+  - enemiesInWave: 0000000000000000000000000100000001000000
+    spawnInterval: 2
   - enemiesInWave: 0000000000000000000000000100000001000000
     spawnInterval: 2
   timeBetweenWaves: 5
