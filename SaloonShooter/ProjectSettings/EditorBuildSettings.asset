@@ -31,5 +31,7 @@ EditorBuildSettings:
     path: Assets/SampleScenes/Scenes/RollerBall.unity
   - enabled: 1
     path: Assets/Scenes/UpgradeMenu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Callum-New.unity
+  - enabled: 1
+    path: Assets/Scenes/Patryk.unity

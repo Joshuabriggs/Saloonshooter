@@ -334,10 +334,10 @@ RectTransform:
   - {fileID: 1452781874}
   m_Father: {fileID: 1795240140}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015259, y: 417}
-  m_SizeDelta: {x: -1144, y: -890}
+  m_AnchoredPosition: {x: 0.000015259, y: -90}
+  m_SizeDelta: {x: -1144, y: 124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342960043
 MonoBehaviour:
@@ -796,7 +796,7 @@ GameObject:
   - 114: {fileID: 494977684}
   m_Layer: 5
   m_Name: Small Beer of Healing
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,7 +920,7 @@ GameObject:
   - 114: {fileID: 499227547}
   m_Layer: 5
   m_Name: Oversized Beer of Healing
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ GameObject:
   - 114: {fileID: 628248329}
   m_Layer: 5
   m_Name: Hyperactive Beer
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,7 +1516,7 @@ GameObject:
   - 114: {fileID: 913832785}
   m_Layer: 5
   m_Name: Movement Upgrade
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1832,7 +1832,7 @@ GameObject:
   - 114: {fileID: 1092245848}
   m_Layer: 5
   m_Name: Medium Beer of Healing
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2104,7 +2104,7 @@ GameObject:
   - 114: {fileID: 1197470085}
   m_Layer: 5
   m_Name: Revolver
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2302,7 +2302,7 @@ GameObject:
   - 114: {fileID: 1257683890}
   m_Layer: 5
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2532,7 +2532,7 @@ GameObject:
   - 114: {fileID: 1312091784}
   m_Layer: 5
   m_Name: Max health
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2590,7 +2590,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1312091782}
   m_OnClick:
     m_PersistentCalls:
@@ -2894,7 +2894,7 @@ GameObject:
   - 114: {fileID: 1422747427}
   m_Layer: 5
   m_Name: Reload Upgrade
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2952,7 +2952,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1422747425}
   m_OnClick:
     m_PersistentCalls:
@@ -3270,7 +3270,7 @@ GameObject:
   - 114: {fileID: 1669830577}
   m_Layer: 5
   m_Name: Revolver Ammo
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3463,7 +3463,7 @@ GameObject:
   - 114: {fileID: 1742570918}
   m_Layer: 5
   m_Name: Large Beer of Healing
-  m_TagString: Untagged
+  m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

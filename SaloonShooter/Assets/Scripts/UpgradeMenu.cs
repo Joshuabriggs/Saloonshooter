@@ -1,13 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class UpgradeMenu : MonoBehaviour {
 
-	
+    List<ShopItem> shopItems = new List<ShopItem>();
+
     void Start()
     {
         Cursor.visible = true;
+
+        foreach(GameObject _object in GameObject.FindGameObjectsWithTag("ShopButton"))
+        {
+            if(_object.GetComponent<ShopItem>() != null)
+            {
+                shopItems.Add(_object.GetComponent<ShopItem>());
+            }
+        }
+
+        UpdateButtons();
+
     }
 
     public void OnNextWave()
@@ -19,7 +32,10 @@ public class UpgradeMenu : MonoBehaviour {
 
     void UpdateButtons()
     {
-
+        foreach(ShopItem _item in shopItems)
+        {
+            _item.CanPlayerAfford();
+        }
     }
 
 
@@ -30,6 +46,8 @@ public class UpgradeMenu : MonoBehaviour {
         GameState.instance.AddScore(-100);
         GameState.instance.m_maxHealth += 10;
         GameState.instance.UpdateHealthUI();
+
+        UpdateButtons();
     }
 
     public void OnReloadTimeIncrease()
@@ -40,11 +58,15 @@ public class UpgradeMenu : MonoBehaviour {
 
         GameState.instance.reloadTime = Mathf.Max(GameState.instance.reloadTime, 0f);
 
+        UpdateButtons();
+
     }
 
     public void OnTurretCreate()
     {
         GameState.instance.AddScore(-500);
+
+        UpdateButtons();
     }
 
 }

@@ -16,7 +16,7 @@ public class ParticleDestroy : MonoBehaviour {
         {
             if (!ps.IsAlive())
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 1f);
             }
         }
     }
