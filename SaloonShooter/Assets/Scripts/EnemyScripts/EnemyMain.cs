@@ -218,12 +218,9 @@ public class EnemyMain : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collider m_col)
+    void ChangeHealth(float m_change)
     {
-        if (m_col.gameObject.name == "Bottle")
-        {
-            m_health -= 10;
-        }
+        m_health += m_change;
     }
 }
 
