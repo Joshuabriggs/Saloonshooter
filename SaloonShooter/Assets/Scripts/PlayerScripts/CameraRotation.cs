@@ -15,6 +15,8 @@ public class CameraRotation : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+     
         if (this.GetComponent<Rigidbody>()) {
             //this.GetComponent<Rigidbody>().freezeRotation = true;
         }
@@ -22,6 +24,9 @@ public class CameraRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+       
         if(axes == RotationAxes.MouseXAndY)
         {
             float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -29,7 +34,7 @@ public class CameraRotation : MonoBehaviour {
             rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+            transform.localEulerAngles = new Vector3(-rotationY , rotationX , 0);
         }
         else if (axes == RotationAxes.MouseX)
         {
