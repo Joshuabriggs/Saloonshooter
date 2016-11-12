@@ -35,6 +35,9 @@ public class GameState : MonoBehaviour {
     [SerializeField] Text m_healthText;
     [SerializeField] Text m_maxHealthText;
 
+    [SerializeField] Canvas m_mainUI;
+    [SerializeField] Canvas m_deadUI;
+
 
     void Update()
     {
@@ -65,6 +68,12 @@ public class GameState : MonoBehaviour {
             m_health = Mathf.Max(0, m_health);
             m_health = Mathf.Min(m_maxHealth, m_health);
 
+        }
+
+        if(m_health <= 0)
+        {
+            m_mainUI.gameObject.SetActive(false);
+            m_deadUI.gameObject.SetActive(true);
         }
 
     }
@@ -111,7 +120,11 @@ public class GameState : MonoBehaviour {
     public void UpgradeMenu()
     {
         Time.timeScale = 0f;
-        SceneManager.LoadScene("UpgradeMenu", LoadSceneMode.Additive);
+        if(SceneManager.sceneCount <= 1)
+        {
+            SceneManager.LoadScene("UpgradeMenu", LoadSceneMode.Additive);
+        }
+        
     }
 
     public void NextWave()
@@ -123,7 +136,7 @@ public class GameState : MonoBehaviour {
 
     public void SpawnEnemy(int _type, Vector3 _pos)
     {
-        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
+        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[_type], _pos, Quaternion.identity);
         m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 

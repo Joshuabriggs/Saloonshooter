@@ -39,14 +39,16 @@ public class EnemySpawning : MonoBehaviour {
             float timeInterval = Time.time - lastSpawnTime;
             float spawnInterval = waves[GameState.instance.m_wave].spawnInterval;
             if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-                 timeInterval > spawnInterval) && enemiesSpawned < waves[GameState.instance.m_wave].maxEnemies)
+                 timeInterval > spawnInterval) && waves[GameState.instance.m_wave].enemiesInWave.Count > 0)
             {
                 lastSpawnTime = Time.time;
-                GameState.instance.SpawnEnemy(Random.Range(0, waves[GameState.instance.m_wave].enemyTypes), m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position);
+                int rand = Random.Range(0, waves[GameState.instance.m_wave].enemiesInWave.Count);
+                GameState.instance.SpawnEnemy((int)waves[GameState.instance.m_wave].enemiesInWave[rand], m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position);
+                waves[GameState.instance.m_wave].enemiesInWave.RemoveAt(rand);
                 enemiesSpawned++;
                 Debug.Log(enemiesSpawned);
             }
-            if (enemiesSpawned == waves[GameState.instance.m_wave].maxEnemies &&
+            if (waves[GameState.instance.m_wave].enemiesInWave.Count <= 0 &&
                 GameState.instance.m_enemies.Count <= 0)
             {
                 GameState.instance.UpgradeMenu();
