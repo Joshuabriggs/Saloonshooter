@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour {
     private Rigidbody rbody;
     public bool Spin = false;
 
+    public GameObject particleEffect;
+
     float m_damage = 10f;
 
 	// Use this for initialization
@@ -22,11 +24,11 @@ public class Projectile : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision col) {
+    void OnCollisionEnter(Collision col) {       
         switch (col.gameObject.tag) {
             case "Ground":
                 Spin = false;
-                Destroy(gameObject);
+                onDestroy();
                 break;
 
             case "Enemy":
@@ -38,12 +40,16 @@ public class Projectile : MonoBehaviour {
                 {
                     Debug.LogError("Missing EnemyMain script on enemy! Errors may happen!");
                 }
-                Destroy(gameObject);
+                onDestroy();
                 break;
-    }
+        }
 
         
 
             //Destroy(rbody);
-        }
     }
+    private void onDestroy() {
+        Instantiate(particleEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+}

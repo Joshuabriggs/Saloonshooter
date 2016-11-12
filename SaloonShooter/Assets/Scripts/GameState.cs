@@ -10,7 +10,7 @@ public class GameState : MonoBehaviour {
     float m_health = 50;
 
     //GameObjects
-    [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    //[SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
     List<EnemyMain> m_enemies = new List<EnemyMain>();
@@ -41,8 +41,8 @@ public class GameState : MonoBehaviour {
 
     public void SpawnEnemy(Vector3 _pos)
     {
-        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
-        m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
+        //GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
+        //m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
     public void DestroyEnemy(EnemyMain _enemy)
