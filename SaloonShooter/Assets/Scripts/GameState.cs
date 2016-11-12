@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameState : MonoBehaviour {
 
     int m_score;
-    public int m_level;
+    public int m_wave;
     float m_health = 50;
     float m_maxHealth = 50f;
 
@@ -14,13 +14,13 @@ public class GameState : MonoBehaviour {
     float healthBarSpeed = 6f;
 
     //GameObjects
-    //[SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
     List<EnemyMain> m_enemies = new List<EnemyMain>();
 
     //UI
-    [SerializeField] Text m_levelDisplay;
+    [SerializeField] Text m_waveDisplay;
     [SerializeField] Text m_scoreDisplay;
     [SerializeField] Image m_reloadBar;
     [SerializeField] Image m_healthBar;
@@ -69,7 +69,7 @@ public class GameState : MonoBehaviour {
 
         if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
         {
-            m_healthBar.material.color = Color.red;
+            //m_healthBar.material.color = Color.red;
         }
 
     }
@@ -81,16 +81,16 @@ public class GameState : MonoBehaviour {
 
     }
 
-    public void AddLevel(int _delta)
+    public void AddWave(int _delta)
     {
-        m_level += _delta;
-        m_levelDisplay.text = "Level: " + m_level;
+        m_wave += _delta;
+        m_waveDisplay.text = "Wave: " + (m_wave+1);
     }
 
-    public void SpawnEnemy(Vector3 _pos)
+    public void SpawnEnemy(int _type, Vector3 _pos)
     {
-        //GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
-        //m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
+        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
+        m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
     public void DestroyEnemy(EnemyMain _enemy)

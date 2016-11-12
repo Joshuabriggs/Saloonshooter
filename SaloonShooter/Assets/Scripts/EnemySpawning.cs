@@ -15,8 +15,6 @@ public class EnemySpawning : MonoBehaviour {
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
 
-    private int currentWave = 0;
-
     // Use this for initialization
     void Start () {
 
@@ -31,26 +29,27 @@ public class EnemySpawning : MonoBehaviour {
         }
 
         //StartCoroutine(SpawnEnemy());
+
 	}
 
     void Update()
     {
-        if (currentWave < waves.Length)
+        if (GameState.instance.m_wave < waves.Length)
         {
             float timeInterval = Time.time - lastSpawnTime;
-            float spawnInterval = waves[currentWave].spawnInterval;
+            float spawnInterval = waves[GameState.instance.m_wave].spawnInterval;
             if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-                 timeInterval > spawnInterval) && enemiesSpawned < waves[currentWave].maxEnemies)
+                 timeInterval > spawnInterval) && enemiesSpawned < waves[GameState.instance.m_wave].maxEnemies)
             {
                 lastSpawnTime = Time.time;
-                int rnd = waves[currentWave].enemyPrefab.Length;
-                GameObject newEnemy = (GameObject)Instantiate(waves[currentWave].enemyPrefab[Random.Range(0,rnd)], m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position,Quaternion.identity);
+                GameState.instance.SpawnEnemy(Random.Range(0, waves[GameState.instance.m_wave].enemyTypes), m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position);
                 enemiesSpawned++;
+                Debug.Log(enemiesSpawned);
             }
-            if (enemiesSpawned == waves[currentWave].maxEnemies &&
+            if (enemiesSpawned == waves[GameState.instance.m_wave].maxEnemies &&
                 GameObject.FindGameObjectWithTag("Enemy") == null)
             {
-                currentWave++;
+                GameState.instance.AddWave(1);
                 //gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;

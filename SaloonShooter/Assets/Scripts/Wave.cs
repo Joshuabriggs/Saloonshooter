@@ -4,7 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class Wave
 {
-    public GameObject[] enemyPrefab;
+    public int enemyTypes = 0;
     public float spawnInterval = 2f;
     public int maxEnemies = 10;
 }
