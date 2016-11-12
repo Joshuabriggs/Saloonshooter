@@ -14,6 +14,9 @@ public class FireProjectile : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        GameState.instance.UpdateReloadBar(Time.time + CooldownTime - currentTime);
+
         if (Input.GetMouseButtonDown(0)) {
             if (currentTime <=Time.time) {
                 currentTime = Time.time + CooldownTime;

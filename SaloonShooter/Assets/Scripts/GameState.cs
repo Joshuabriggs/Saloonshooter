@@ -7,7 +7,7 @@ public class GameState : MonoBehaviour {
 
     int m_score;
     public int m_level;
-    int m_health = 50;
+    float m_health = 50;
 
     //GameObjects
     [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
@@ -18,6 +18,13 @@ public class GameState : MonoBehaviour {
     //UI
     [SerializeField] Text m_levelDisplay;
     [SerializeField] Text m_scoreDisplay;
+    [SerializeField] Image m_reloadBar;
+    [SerializeField] Image m_healthBar;
+
+    public void UpdateReloadBar(float _amount)
+    {
+        m_reloadBar.fillAmount = _amount;
+    }
 
     public void AddScore(int _delta)
     {
@@ -42,6 +49,16 @@ public class GameState : MonoBehaviour {
     {
         m_enemies.Remove(_enemy);
         Destroy(_enemy.gameObject);
+
+        AddScore(10);
+
+    }
+
+    public void PlayerHit(float _damage)
+    {
+        m_health -= _damage;
+        m_healthBar.fillAmount = m_health / 50f;
+
     }
 
     public void HitEnemy(EnemyMain _enemy, float _damage)
