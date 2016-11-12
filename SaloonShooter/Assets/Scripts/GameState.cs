@@ -21,7 +21,7 @@ public class GameState : MonoBehaviour {
     [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
-    List<EnemyMain> m_enemies = new List<EnemyMain>();
+    public List<EnemyMain> m_enemies = new List<EnemyMain>();
 
     //UI
     [SerializeField] Text m_waveDisplay;
@@ -48,7 +48,7 @@ public class GameState : MonoBehaviour {
             else if (deltaHealth > Time.deltaTime * healthBarSpeed)
             {
                 m_health += Time.deltaTime * healthBarSpeed;
-                deltaHealth += Time.deltaTime * healthBarSpeed;
+                deltaHealth -= Time.deltaTime * healthBarSpeed;
                 UpdateHealthUI();
             }
             else
@@ -57,6 +57,10 @@ public class GameState : MonoBehaviour {
                 deltaHealth = 0;
                 UpdateHealthUI();
             }
+
+            m_health = Mathf.Max(0, m_health);
+            m_health = Mathf.Min(m_maxHealth, m_health);
+
         }
 
     }
@@ -91,7 +95,7 @@ public class GameState : MonoBehaviour {
     public void AddScore(int _delta)
     {
         m_score += _delta;
-        m_scoreDisplay.text = "Score: " + m_score;
+        m_scoreDisplay.text = "$" + m_score;
         
     }
 

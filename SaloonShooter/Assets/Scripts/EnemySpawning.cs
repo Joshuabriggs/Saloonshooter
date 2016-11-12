@@ -47,7 +47,7 @@ public class EnemySpawning : MonoBehaviour {
                 Debug.Log(enemiesSpawned);
             }
             if (enemiesSpawned == waves[GameState.instance.m_wave].maxEnemies &&
-                GameObject.FindGameObjectWithTag("Enemy") == null)
+                GameState.instance.m_enemies.Count <= 0)
             {
                 GameState.instance.UpgradeMenu();
                 //gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
