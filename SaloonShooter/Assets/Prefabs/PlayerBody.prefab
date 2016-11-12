@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdc19dee960f894d9491c1258149a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 5
+  MovementSpeed: 8
   HideHeight: 50
   PlayerHealth: 0
 --- !u!114 &11461308

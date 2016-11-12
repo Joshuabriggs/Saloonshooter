@@ -11,38 +11,65 @@ public class PlayerControll : MonoBehaviour {
     private float currentSpeed; //Players current speed which is affected by crouching
     private bool isCrouched=false; //Crouch flag
 
+    private bool keyLeft, keyRight, KeyCrouch;
+
 	// Update is called once per frame
 	void Update () {
         SpeedControl();
+        GetInput();
     }
 
     void FixedUpdate() {
         Movement();
     }
 
+    private void GetInput() {    
+        if (Input.GetKey(KeyCode.A))
+        {
+            keyLeft = true;
+        }
+        if (Input.GetKeyUp(KeyCode.A)) {
+            keyLeft = false;
+        }
+        //Move Right
+        if (Input.GetKey(KeyCode.D))
+        {
+            keyRight = true;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            keyRight = false;
+        }
+        //Crouch
+        if (Input.GetKey(KeyCode.C))
+        {
+            KeyCrouch = true;
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            KeyCrouch = false;
+        }
+    }
+
     //Player movement
     private void Movement() {
-        //Move Left
-        if (Input.GetKey(KeyCode.A))
+        if (keyLeft)
         {
             transform.Translate(transform.right * currentSpeed * Time.deltaTime);
         }
         //Move Right
-        if (Input.GetKey(KeyCode.D))
+        if (keyRight)
         {
             transform.Translate(transform.right * -currentSpeed * Time.deltaTime);
 
         }
         //Crouch
-        if (Input.GetKeyDown(KeyCode.S) && isCrouched == false)
+        if (KeyCrouch && !isCrouched)
         {
-            
             crouch();
             transform.Translate(transform.up * -HideHeight * Time.deltaTime);
         }
-        //Stand Up
-        if (Input.GetKeyDown(KeyCode.W) && isCrouched == true)
-        {           
+        if(!KeyCrouch && isCrouched){
             stopCrouching();
             transform.Translate(transform.up * HideHeight * Time.deltaTime);
         }
