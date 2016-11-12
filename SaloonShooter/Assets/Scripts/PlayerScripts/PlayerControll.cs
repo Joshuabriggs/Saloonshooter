@@ -14,8 +14,11 @@ public class PlayerControll : MonoBehaviour
     private float currentSpeed; //Players current speed which is affected by crouching
     [HideInInspector]
     public int m_drunkspin = 0;
-    private float m_drunkmultiply = 0.5f;
-    private int m_drunkcount = 5;
+    private float m_xDrunkmultiply = 0.5f;
+    private float m_zDrunkmultiply = 0.5f;
+    private int m_zDelay = 10;
+    private int m_xDrunkcount = 25;
+    private int m_zDrunkcount = 25;
     private bool isCrouched = false; //Crouch flag
 
 
@@ -106,44 +109,71 @@ public class PlayerControll : MonoBehaviour
                 break;
 
             case 1:
-                transform.Rotate(new Vector3(1f, 0, -1) * m_drunkmultiply, Space.World);
+                transform.Rotate(new Vector3(0.2f, 0, 0) * m_xDrunkmultiply, Space.World);
+
+                if(m_zDelay < 0)
+                {
+                    transform.Rotate(new Vector3(0, 0, -0.2f) * m_zDrunkmultiply, Space.World);
+                    m_zDrunkcount++;
+                }
 
                 transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, -90, transform.rotation.eulerAngles.z);
-                m_drunkcount++;
-                if (m_drunkcount > 10)
+                m_xDrunkcount++;
+                if (m_xDrunkcount > 50)
                 {
-                    m_drunkmultiply *= -1;
-                    m_drunkcount = 0;
+                    m_xDrunkmultiply *= -1;
+                    m_xDrunkcount = 0;
                 }
+                if (m_zDrunkcount > 50)
+                {
+                    m_zDrunkmultiply *= -1;
+                    m_zDrunkcount = 0;
+                }
+                m_zDelay--;
 
                 break;
 
             case 2:
-                transform.Rotate(new Vector3(1, 0, -1) * m_drunkmultiply, Space.World);
+                transform.Rotate(new Vector3(0.5f, 0, 0) * m_xDrunkmultiply, Space.World);
+                transform.Rotate(new Vector3(0, 0, -0.5f) * m_zDrunkmultiply, Space.World);
 
                 transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, -90, transform.rotation.eulerAngles.z);
 
-                m_drunkcount++;
-                if (m_drunkcount > 20)
+                m_xDrunkcount++;
+                m_zDrunkcount++;
+
+                if (m_xDrunkcount > 40)
                 {
-                    m_drunkmultiply *= -1;
-                    m_drunkcount = 0;
+                    m_xDrunkmultiply *= -1;
+                    m_xDrunkcount = 0;
+                }
+                if (m_zDrunkcount > 40)
+                {
+                    m_zDrunkmultiply *= -1;
+                    m_zDrunkcount = 0;
                 }
 
                 break;
 
             case 3:
-                transform.Rotate(new Vector3(1, 0, -1) * m_drunkmultiply, Space.World);
+                transform.Rotate(new Vector3(1, 0, 0) * m_xDrunkmultiply, Space.World);
+                transform.Rotate(new Vector3(0, 0, -1) * m_zDrunkmultiply, Space.World);
 
 
                 transform.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, -90, transform.rotation.eulerAngles.z);
 
 
-                m_drunkcount++;
-                if (m_drunkcount > 30)
+                m_xDrunkcount++;
+                m_zDrunkcount++;
+                if (m_xDrunkcount > 30)
                 {
-                    m_drunkmultiply *= -1;
-                    m_drunkcount = 0;
+                    m_xDrunkmultiply *= -1;
+                    m_xDrunkcount = 0;
+                }
+                if (m_zDrunkcount > 30)
+                {
+                    m_zDrunkmultiply *= -1;
+                    m_zDrunkcount = 0;
                 }
 
                 break;

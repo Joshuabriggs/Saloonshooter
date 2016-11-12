@@ -6,7 +6,7 @@ public class Enemy2 : MonoBehaviour {
     private float m_attacktimer = 30f;
     private Vector3 m_shotSpawn;
     private Transform m_transform;
-    private Transform m_guntransform;
+    public Transform m_guntransform;
     private Rigidbody m_body;
     private GameObject m_player;
     public GameObject m_bullet;
@@ -19,7 +19,6 @@ public class Enemy2 : MonoBehaviour {
 
         m_transform = transform;
         m_body = GetComponent<Rigidbody>();
-        m_guntransform = GetComponentInChildren<Transform>();
         m_player = GameObject.Find("PlayerBody");
         m_run = false;
 
@@ -38,7 +37,7 @@ public class Enemy2 : MonoBehaviour {
             if (m_attacktimer <= 0)
             {
                 m_attacktimer = 200f;
-                Instantiate(m_bullet, m_shotSpawn, m_transform.rotation);
+                Instantiate(m_bullet, m_shotSpawn, m_guntransform.rotation);
             }
 
             m_attacktimer -= 1;
