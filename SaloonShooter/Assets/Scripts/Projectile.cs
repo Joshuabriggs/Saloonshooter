@@ -26,6 +26,7 @@ public class Projectile : MonoBehaviour {
         switch (col.gameObject.tag) {
             case "Ground":
                 Spin = false;
+                Destroy(gameObject);
                 break;
 
             case "Enemy":
@@ -37,10 +38,12 @@ public class Projectile : MonoBehaviour {
                 {
                     Debug.LogError("Missing EnemyMain script on enemy! Errors may happen!");
                 }
-                
+                Destroy(gameObject);
                 break;
     }
+
+        
+
             //Destroy(rbody);
         }
     }
-}

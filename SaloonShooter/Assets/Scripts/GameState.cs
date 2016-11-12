@@ -47,6 +47,7 @@ public class GameState : MonoBehaviour {
     public void HitEnemy(EnemyMain _enemy, float _damage)
     {
         _enemy.ChangeHealth(_damage);
+        Debug.Log("Enemy was hit!");
     }
 
     public static GameState instance = null;

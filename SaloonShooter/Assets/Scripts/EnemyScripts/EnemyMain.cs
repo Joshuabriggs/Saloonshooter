@@ -84,7 +84,8 @@ public class EnemyMain : MonoBehaviour
 
         if (m_health <= 0)
         {
-            Destroy(gameObject);
+            GameState.instance.DestroyEnemy(this);
+            Debug.Log("Enemy is dead :(");
         }
 
     }
@@ -218,13 +219,9 @@ public class EnemyMain : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
-    void OnCollisionEnter(Collision m_col)
-=======
-    void ChangeHealth(float m_change)
->>>>>>> origin/master
+    public void ChangeHealth(float m_change)
     {
-        m_health += m_change;
+        m_health -= m_change;
     }
 }
 
