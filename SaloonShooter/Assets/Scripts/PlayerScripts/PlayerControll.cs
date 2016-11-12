@@ -20,7 +20,7 @@ public class PlayerControll : MonoBehaviour
 
 
     private bool keyLeft, keyRight, KeyCrouch;
-	
+
     // Update is called once per frame
     void Update()
     {
@@ -32,15 +32,17 @@ public class PlayerControll : MonoBehaviour
 
     void FixedUpdate()
     {
-        Movement(); 
+        Movement();
     }
 
-    private void GetInput() {    
+    private void GetInput()
+    {
         if (Input.GetKey(KeyCode.A))
         {
             keyLeft = true;
         }
-        if (Input.GetKeyUp(KeyCode.A)) {
+        if (Input.GetKeyUp(KeyCode.A))
+        {
             keyLeft = false;
         }
         //Move Right
@@ -60,6 +62,14 @@ public class PlayerControll : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.C))
         {
             KeyCrouch = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GameState.instance.m_currentWeapon = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameState.instance.m_currentWeapon = 2;
         }
     }
 
@@ -89,7 +99,7 @@ public class PlayerControll : MonoBehaviour
         }
     }
     private void Drunk()
-    {       
+    {
         switch (m_drunkspin)
         {
             case 0:

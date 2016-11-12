@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Enemy_01
   - Enemy_02
+  - Enemy
+  - ShopButton
   layers:
   - Default
   - TransparentFX
