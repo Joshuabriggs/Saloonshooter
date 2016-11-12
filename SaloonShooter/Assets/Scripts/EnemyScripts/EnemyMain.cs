@@ -218,7 +218,7 @@ public class EnemyMain : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collider m_col)
+    void OnCollisionEnter(Collision m_col)
     {
         if (m_col.gameObject.name == "Bottle")
         {
