@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MouseLook : MonoBehaviour {
+public class CameraRotation : MonoBehaviour {
 
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -16,7 +16,7 @@ public class MouseLook : MonoBehaviour {
     // Use this for initialization
     void Start () {
         if (this.GetComponent<Rigidbody>()) {
-            this.GetComponent<Rigidbody>().freezeRotation = true;
+            //this.GetComponent<Rigidbody>().freezeRotation = true;
         }
     }
 	

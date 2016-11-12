@@ -9,8 +9,6 @@ public class EnemySpawning : MonoBehaviour {
 
     float m_spawnRate = 3f;
 
-    [SerializeField] GameObject m_enemy;
-
 	// Use this for initialization
 	void Start () {
 
@@ -28,9 +26,10 @@ public class EnemySpawning : MonoBehaviour {
 	
 	IEnumerator SpawnEnemy()
     {
-
+        m_spawnRate = Mathf.Max(5f - (GameState.instance.m_level * 0.1f), 1f);
+        Debug.Log("Spawn rate is set to " + m_spawnRate + " seconds.");
         yield return new WaitForSeconds(m_spawnRate);
-        Instantiate(m_enemy, m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position, Quaternion.identity);
+        GameState.instance.SpawnEnemy(m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position);
         StartCoroutine(SpawnEnemy());
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SaloonShooter/Assets/Scripts/PlayerScripts/PlayerControl.cs.meta
 guid: 3cdc19dee960f894d9491c1258149a65
+=======
+guid: 5b32e72f43a1d8b43acf93d1fe011574
+>>>>>>> origin/master:SaloonShooter/Assets/Scripts/PlayerScripts/PlayerControll.cs.meta
 timeCreated: 1478888834
 licenseType: Pro
 MonoImporter:

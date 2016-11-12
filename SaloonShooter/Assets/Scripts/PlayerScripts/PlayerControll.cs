@@ -1,24 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControll : MonoBehaviour {
 
     public float MovementSpeed=5.0f; //How fast does the player move
-    public float HideHeight = 20.0f; //How low does the player hide
+    public float HideHeight = 50.0f; //How low does the player hide
 
     public float PlayerHealth; //Players health (for later use)
-
-    private Rigidbody rbody;
 
     private float currentSpeed; //Players current speed which is affected by crouching
     private bool isCrouched=false; //Crouch flag
 
-
-	// Use this for initialization
-	void Start () {
-        rbody = this.GetComponent<Rigidbody>(); //Get the player rigidbody
-	}
-	
 	// Update is called once per frame
 	void Update () {
         SpeedControl();
@@ -33,25 +25,26 @@ public class PlayerControl : MonoBehaviour {
         //Move Left
         if (Input.GetKey(KeyCode.A))
         {
-            rbody.MovePosition(transform.position + transform.forward * currentSpeed * Time.deltaTime);
+            transform.Translate(transform.right * currentSpeed * Time.deltaTime);
         }
         //Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            rbody.MovePosition(transform.position + transform.forward * -currentSpeed * Time.deltaTime);
+            transform.Translate(transform.right * -currentSpeed * Time.deltaTime);
 
         }
         //Crouch
         if (Input.GetKeyDown(KeyCode.S) && isCrouched == false)
         {
-            rbody.MovePosition(transform.position + transform.up * -HideHeight * Time.deltaTime);
+            
             crouch();
+            transform.Translate(transform.up * -HideHeight * Time.deltaTime);
         }
         //Stand Up
         if (Input.GetKeyDown(KeyCode.W) && isCrouched == true)
-        {
-            rbody.MovePosition(transform.position + transform.up * HideHeight * Time.deltaTime);
+        {           
             stopCrouching();
+            transform.Translate(transform.up * HideHeight * Time.deltaTime);
         }
     }
 
