@@ -21,7 +21,8 @@ public class EnemyMain : MonoBehaviour
     private int m_enemytype;
     [HideInInspector]
     public bool m_atbar;
-    private Transform m_transform;
+    [HideInInspector]
+    public Transform m_transform;
     private Rigidbody m_body;
     private GameObject m_player;
     private Vector3 m_relativePos;

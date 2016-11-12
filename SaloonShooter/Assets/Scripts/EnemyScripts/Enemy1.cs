@@ -49,7 +49,7 @@ public class Enemy1 : MonoBehaviour {
 
             if (m_deathtimer <= 0)
             {
-                DestroyObject(gameObject);
+                GameState.instance.DestroyEnemy(gameObject.GetComponent<EnemyMain>());
             }
         }
     }
