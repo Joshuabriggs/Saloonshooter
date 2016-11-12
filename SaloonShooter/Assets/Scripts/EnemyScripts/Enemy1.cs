@@ -31,7 +31,7 @@ public class Enemy1 : MonoBehaviour {
             {
                 if (m_attacktimer <= 0)
                 {
-                    m_body.AddForce(new Vector3(0, 500f, -500f));
+                    m_body.AddForce(new Vector3(0, 500f, 500f));
                     m_attacktimer = 90f;
                     m_isdead = true;
                 }
