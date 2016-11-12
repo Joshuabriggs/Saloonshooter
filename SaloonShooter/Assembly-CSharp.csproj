@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy1.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy2.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyBoss.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyBulletScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyMain.cs" />
      <Compile Include="Assets\Scripts\EnemySpawning.cs" />

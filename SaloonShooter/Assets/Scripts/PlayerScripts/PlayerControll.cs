@@ -18,58 +18,119 @@ public class PlayerControll : MonoBehaviour
     private int m_drunkcount = 5;
     private bool isCrouched = false; //Crouch flag
 
+
+    private bool keyLeft, keyRight, KeyCrouch;
+
+<<<<<<< HEAD
+
     // Update is called once per frame
     void Update()
     {
+=======
+	// Update is called once per frame
+	
+    // Update is called once per frame
+    void Update()
+    {
+
+>>>>>>> origin/master
         SpeedControl();
+        GetInput();
+        Drunk();
     }
 
     void FixedUpdate()
     {
-        Movement();
-        Drunk();
-
+        Movement(); 
     }
 
-    void Start()
-    {
-        
-
-    }
-
-    //Player movement
-    private void Movement()
-    {
-        //Move Left
+    private void GetInput() {    
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(transform.right * currentSpeed * Time.deltaTime);
+            keyLeft = true;
+        }
+        if (Input.GetKeyUp(KeyCode.A)) {
+            keyLeft = false;
         }
         //Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(transform.right * -currentSpeed * Time.deltaTime);
-
+            keyRight = true;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            keyRight = false;
         }
         //Crouch
-        if (Input.GetKeyDown(KeyCode.S) && isCrouched == false)
+        if (Input.GetKey(KeyCode.C))
         {
-
-            crouch();
-            transform.Translate(transform.up * -HideHeight * Time.deltaTime);
+            KeyCrouch = true;
         }
-        //Stand Up
-        if (Input.GetKeyDown(KeyCode.W) && isCrouched == true)
+        if (Input.GetKeyUp(KeyCode.C))
         {
-            stopCrouching();
-            transform.Translate(transform.up * HideHeight * Time.deltaTime);
+            KeyCrouch = false;
         }
     }
 
-    private void Drunk()
+    //Player movement
+<<<<<<< HEAD
+    private void Movement()
     {
-       
-        
+        //Move Left
+        if (Input.GetKey(KeyCode.A))
+            if (keyLeft)
+            {
+                transform.Translate(transform.right * currentSpeed * Time.deltaTime);
+            }
+=======
+    private void Movement() {
+        if (keyLeft)
+        {
+            transform.Translate(transform.right * currentSpeed * Time.deltaTime);
+        }
+>>>>>>> origin/master
+        //Move Right
+        if (Input.GetKey(KeyCode.D))
+            if (keyRight)
+            {
+                transform.Translate(transform.right * -currentSpeed * Time.deltaTime);
+
+            }
+        //Crouch
+<<<<<<< HEAD
+            if (KeyCrouch && !isCrouched)
+            {
+=======
+        if (KeyCrouch && !isCrouched)
+        {
+            crouch();
+            transform.Translate(transform.up * -HideHeight * Time.deltaTime);
+        }
+        if(!KeyCrouch && isCrouched){
+>>>>>>> origin/master
+
+                crouch();
+                transform.Translate(transform.up * -HideHeight * Time.deltaTime);
+            }
+        //Stand Up
+<<<<<<< HEAD
+            if (!KeyCrouch && isCrouched)
+            {
+                stopCrouching();
+                transform.Translate(transform.up * HideHeight * Time.deltaTime);
+            }
+=======
+        if (Input.GetKeyDown(KeyCode.W) && isCrouched == true)
+        {
+
+            stopCrouching();
+            transform.Translate(transform.up * HideHeight * Time.deltaTime);
+        }
+>>>>>>> origin/master
+    }
+
+    private void Drunk()
+    {       
         switch (m_drunkspin)
         {
             case 0:
