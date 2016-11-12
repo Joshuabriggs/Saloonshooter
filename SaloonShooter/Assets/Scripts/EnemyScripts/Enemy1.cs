@@ -34,7 +34,7 @@ public class Enemy1 : MonoBehaviour {
                     m_body.AddForce(new Vector3(0, 500f, 500f));
                     m_attacktimer = 90f;
                     m_isdead = true;
-                    GameState.instance.PlayerHit(10f);
+                    GameState.instance.UpdateHealth(-10f);
                 }
 
                 m_transform.eulerAngles = new Vector3(0, 0, 0);
