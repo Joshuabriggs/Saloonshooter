@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Callum-New.unity
+- path: Assets/Scenes/UpgradeMenu.unity
   isLoaded: 1
   isActive: 1
