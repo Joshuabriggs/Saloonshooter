@@ -18,10 +18,18 @@ public class PlayerControll : MonoBehaviour
     private int m_drunkcount = 5;
     private bool isCrouched = false; //Crouch flag
 
+<<<<<<< HEAD
+    private bool keyLeft, keyRight, KeyCrouch;
+
+	// Update is called once per frame
+	void Update () {
+=======
     // Update is called once per frame
     void Update()
     {
+>>>>>>> origin/master
         SpeedControl();
+        GetInput();
     }
 
     void FixedUpdate()
@@ -37,23 +45,62 @@ public class PlayerControll : MonoBehaviour
 
     }
 
+    private void GetInput() {    
+        if (Input.GetKey(KeyCode.A))
+        {
+            keyLeft = true;
+        }
+        if (Input.GetKeyUp(KeyCode.A)) {
+            keyLeft = false;
+        }
+        //Move Right
+        if (Input.GetKey(KeyCode.D))
+        {
+            keyRight = true;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            keyRight = false;
+        }
+        //Crouch
+        if (Input.GetKey(KeyCode.C))
+        {
+            KeyCrouch = true;
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            KeyCrouch = false;
+        }
+    }
+
     //Player movement
+<<<<<<< HEAD
+    private void Movement() {
+        if (keyLeft)
+=======
     private void Movement()
     {
         //Move Left
         if (Input.GetKey(KeyCode.A))
+>>>>>>> origin/master
         {
             transform.Translate(transform.right * currentSpeed * Time.deltaTime);
         }
         //Move Right
-        if (Input.GetKey(KeyCode.D))
+        if (keyRight)
         {
             transform.Translate(transform.right * -currentSpeed * Time.deltaTime);
 
         }
         //Crouch
-        if (Input.GetKeyDown(KeyCode.S) && isCrouched == false)
+        if (KeyCrouch && !isCrouched)
         {
+<<<<<<< HEAD
+            crouch();
+            transform.Translate(transform.up * -HideHeight * Time.deltaTime);
+        }
+        if(!KeyCrouch && isCrouched){
+=======
 
             crouch();
             transform.Translate(transform.up * -HideHeight * Time.deltaTime);
@@ -61,6 +108,7 @@ public class PlayerControll : MonoBehaviour
         //Stand Up
         if (Input.GetKeyDown(KeyCode.W) && isCrouched == true)
         {
+>>>>>>> origin/master
             stopCrouching();
             transform.Translate(transform.up * HideHeight * Time.deltaTime);
         }

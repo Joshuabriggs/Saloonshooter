@@ -35,12 +35,12 @@ public class EnemyMain : MonoBehaviour
         m_path = Random.Range(1, 4);
         m_travelling = 1;
         m_body = GetComponent<Rigidbody>();
-        m_player = GameObject.Find("PlayerBody");
+        m_player = GameObject.FindGameObjectWithTag("Player");
         m_startRotation = new Vector3(0, 180, 0);
         m_bossmove = 1;
         m_atbar = false;
 
-        if (gameObject.name == "Enemy1" || gameObject.name == "Enemy1(Clone)")
+        if (gameObject.tag == "Enemy_01")
         {
             m_enemytype = 1;
             m_health = 10f;
@@ -48,7 +48,7 @@ public class EnemyMain : MonoBehaviour
             m_startLocation = m_transform.position;
 
         }
-        if (gameObject.name == "Enemy2" || gameObject.name == "Enemy2(Clone)")
+        if (gameObject.tag == "Enemy_02")
         {
             m_enemytype = 2;
             m_traveldistance = Random.Range(15, 30);
@@ -291,7 +291,7 @@ public class EnemyMain : MonoBehaviour
             m_atbar = true;
         }
 
-        if (m_trig.gameObject.tag == "Enemy")
+        if (m_trig.gameObject.tag == "Enemy_01" || m_trig.gameObject.tag == "Enemy_02")
         {
             m_travelling = 3;
             m_path = Random.Range(1, 3);

@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour {
                 onDestroy();
                 break;
 
-            case "Enemy":
+            case "Enemy_01":
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
                     GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
