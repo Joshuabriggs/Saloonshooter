@@ -49,8 +49,17 @@
      <Compile Include="Assets\Scripts\EnemyScripts\Enemy2.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyBulletScript.cs" />
      <Compile Include="Assets\Scripts\EnemySpawning.cs" />
+     <Compile Include="Assets\Scripts\FireProjectile.cs" />
+     <Compile Include="Assets\Scripts\GUI\Crosshair.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
