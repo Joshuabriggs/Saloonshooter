@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerControll.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\UpgradeMenu.cs" />
      <Compile Include="Assets\Scripts\Wave.cs" />
      <None Include="Assets\Scripts\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Scripts\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
