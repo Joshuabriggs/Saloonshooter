@@ -12959,6 +12959,12 @@ MonoBehaviour:
   - enemyTypes: 0
     spawnInterval: 2
     maxEnemies: 1
+  - enemyTypes: 0
+    spawnInterval: 2
+    maxEnemies: 1
+  - enemyTypes: 0
+    spawnInterval: 2
+    maxEnemies: 1
   timeBetweenWaves: 5
 --- !u!114 &1629142217
 MonoBehaviour:
