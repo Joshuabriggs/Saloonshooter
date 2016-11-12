@@ -16,6 +16,8 @@ public class GameState : MonoBehaviour {
     public float m_rRealoadTime = 5f;
     public int m_currentWeapon = 1;
     public int m_shotCount = 6;
+    public int m_turretCount = 0;
+    public GameObject m_turret;
 
 
     float deltaHealth = 0f;
@@ -78,15 +80,28 @@ public class GameState : MonoBehaviour {
 
     }
 
-    public void ChangeWeapon(int _choice)
-    {
-        
-    }
+    
 
     public void UpdateReloadBar(float _amount)
     {
         m_reloadBar.fillAmount = _amount;
         
+    }
+
+    public void TurretCreate()
+    {
+        switch(m_turretCount)
+        {
+            case 0:
+                Instantiate(m_turret, new Vector3(9, 10, -6), Quaternion.identity);
+                    break;
+
+            case 1:
+                Instantiate(m_turret, new Vector3(-9, 10, -6), Quaternion.identity);
+                break;
+        }
+
+        m_turretCount++;
     }
 
     public void UpdateHealthUI()
