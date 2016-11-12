@@ -2,29 +2,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
 
-    int m_score;
-    public int m_level;
+    public int m_score;
+    public int m_wave;
+
+    //Player stats
     float m_health = 50;
-    float m_maxHealth = 50f;
+    public float m_maxHealth = 50f;
+    public float reloadTime = 1f;
+    public float m_rRealoadTime = 5f;
+    public int m_currentWeapon = 1;
+    public int m_shotCount = 6;
+
 
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
 
     //GameObjects
-    //[SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
-    List<EnemyMain> m_enemies = new List<EnemyMain>();
+    public List<EnemyMain> m_enemies = new List<EnemyMain>();
 
     //UI
-    [SerializeField] Text m_levelDisplay;
+    [SerializeField] Text m_waveDisplay;
     [SerializeField] Text m_scoreDisplay;
     [SerializeField] Image m_reloadBar;
     [SerializeField] Image m_healthBar;
     [SerializeField] Text m_healthText;
+    [SerializeField] Text m_maxHealthText;
+
+    [SerializeField] Canvas m_mainUI;
+    [SerializeField] Canvas m_deadUI;
 
 
     void Update()
@@ -43,7 +55,7 @@ public class GameState : MonoBehaviour {
             else if (deltaHealth > Time.deltaTime * healthBarSpeed)
             {
                 m_health += Time.deltaTime * healthBarSpeed;
-                deltaHealth += Time.deltaTime * healthBarSpeed;
+                deltaHealth -= Time.deltaTime * healthBarSpeed;
                 UpdateHealthUI();
             }
             else
@@ -52,8 +64,23 @@ public class GameState : MonoBehaviour {
                 deltaHealth = 0;
                 UpdateHealthUI();
             }
+
+            m_health = Mathf.Max(0, m_health);
+            m_health = Mathf.Min(m_maxHealth, m_health);
+
         }
 
+        if(m_health <= 0)
+        {
+            m_mainUI.gameObject.SetActive(false);
+            m_deadUI.gameObject.SetActive(true);
+        }
+
+    }
+
+    public void ChangeWeapon(int _choice)
+    {
+        
     }
 
     public void UpdateReloadBar(float _amount)
@@ -64,12 +91,21 @@ public class GameState : MonoBehaviour {
 
     public void UpdateHealthUI()
     {
-        m_healthBar.fillAmount = m_health / 50f;
-        m_healthText.text = "" + (int)m_health;
+        m_healthBar.fillAmount = m_health / m_maxHealth;
+        m_healthText.text = (int)m_health + "";
+        m_maxHealthText.text = "/" + m_maxHealth;
 
-        if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
+        if(m_health >= m_maxHealth - (m_maxHealth * 0.5))
         {
-            m_healthBar.material.color = Color.red;
+            m_healthBar.color = Color.green;
+        }
+        else if(m_health >= m_maxHealth - (m_maxHealth * 0.8))
+        {
+            m_healthBar.color = new Color(1f, 0.6f, 0);
+        }
+        else
+        {
+            m_healthBar.color = Color.red;
         }
 
     }
@@ -77,20 +113,31 @@ public class GameState : MonoBehaviour {
     public void AddScore(int _delta)
     {
         m_score += _delta;
-        m_scoreDisplay.text = "Score: " + m_score;
-
+        m_scoreDisplay.text = "$" + m_score;
+        
     }
 
-    public void AddLevel(int _delta)
+    public void UpgradeMenu()
     {
-        m_level += _delta;
-        m_levelDisplay.text = "Level: " + m_level;
+        Time.timeScale = 0f;
+        if(SceneManager.sceneCount <= 1)
+        {
+            SceneManager.LoadScene("UpgradeMenu", LoadSceneMode.Additive);
+        }
+        
     }
 
-    public void SpawnEnemy(Vector3 _pos)
+    public void NextWave()
     {
-        //GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
-        //m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
+        Time.timeScale = 1f;
+        m_wave ++;
+        m_waveDisplay.text = "Wave: " + (m_wave+1);
+    }
+
+    public void SpawnEnemy(int _type, Vector3 _pos)
+    {
+        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[_type], _pos, Quaternion.identity);
+        m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
     public void DestroyEnemy(EnemyMain _enemy)

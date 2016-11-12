@@ -24,10 +24,12 @@ public class Potion : MonoBehaviour {
         {
             m_close = true;
             
-            if(Input.GetKey(KeyCode.H))
+            if(Input.GetKeyUp(KeyCode.F))
             {
-                GameState.instance.UpdateHealth(-25f);
+                GameState.instance.UpdateHealth(25);
+                m_player.GetComponent<PlayerControll>().m_drunkspin++;
                 Destroy(gameObject);
+                m_close=false;
             }
         }
         else

@@ -15,8 +15,6 @@ public class EnemySpawning : MonoBehaviour {
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
 
-    private int currentWave = 0;
-
     // Use this for initialization
     void Start () {
 
@@ -31,26 +29,29 @@ public class EnemySpawning : MonoBehaviour {
         }
 
         //StartCoroutine(SpawnEnemy());
+
 	}
 
     void Update()
     {
-        if (currentWave < waves.Length)
+        if (GameState.instance.m_wave < waves.Length)
         {
             float timeInterval = Time.time - lastSpawnTime;
-            float spawnInterval = waves[currentWave].spawnInterval;
+            float spawnInterval = waves[GameState.instance.m_wave].spawnInterval;
             if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-                 timeInterval > spawnInterval) && enemiesSpawned < waves[currentWave].maxEnemies)
+                 timeInterval > spawnInterval) && waves[GameState.instance.m_wave].enemiesInWave.Count > 0)
             {
                 lastSpawnTime = Time.time;
-                int rnd = waves[currentWave].enemyPrefab.Length;
-                GameObject newEnemy = (GameObject)Instantiate(waves[currentWave].enemyPrefab[Random.Range(0,rnd)], m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position,Quaternion.identity);
+                int rand = Random.Range(0, waves[GameState.instance.m_wave].enemiesInWave.Count);
+                GameState.instance.SpawnEnemy((int)waves[GameState.instance.m_wave].enemiesInWave[rand], m_spawnPoints[Random.Range(0, m_spawnPoints.Count)].position);
+                waves[GameState.instance.m_wave].enemiesInWave.RemoveAt(rand);
                 enemiesSpawned++;
+                Debug.Log(enemiesSpawned);
             }
-            if (enemiesSpawned == waves[currentWave].maxEnemies &&
-                GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (waves[GameState.instance.m_wave].enemiesInWave.Count <= 0 &&
+                GameState.instance.m_enemies.Count <= 0)
             {
-                currentWave++;
+                GameState.instance.UpgradeMenu();
                 //gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;
