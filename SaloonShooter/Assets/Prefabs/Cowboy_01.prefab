@@ -132,7 +132,7 @@ GameObject:
   - 114: {fileID: 11439864}
   m_Layer: 0
   m_Name: Cowboy_01
-  m_TagString: Enemy
+  m_TagString: Enemy_01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,6 +646,7 @@ MonoBehaviour:
   m_speed: 5
   m_attacktimer: 30
   m_travelling: 0
+  m_atbar: 0
 --- !u!136 &13656024
 CapsuleCollider:
   m_ObjectHideFlags: 1
