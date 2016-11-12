@@ -26,7 +26,7 @@ public class Potion : MonoBehaviour {
             
             if(Input.GetKey(KeyCode.H))
             {
-                GameState.instance.PlayerHit(-25f);
+                GameState.instance.UpdateHealth(-25f);
                 Destroy(gameObject);
             }
         }

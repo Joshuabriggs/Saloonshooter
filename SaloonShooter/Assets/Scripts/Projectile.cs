@@ -24,15 +24,16 @@ public class Projectile : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision col) {       
-        switch (col.gameObject.tag) {
+    void OnCollisionEnter(Collision col) {
+        switch (col.gameObject.tag)
+        {
             case "Ground":
                 Spin = false;
                 onDestroy();
                 break;
 
             case "Enemy":
-                if(col.gameObject.GetComponent<EnemyMain>() != null)
+                if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
                     GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
                 }
@@ -42,20 +43,16 @@ public class Projectile : MonoBehaviour {
                 }
                 onDestroy();
                 break;
-<<<<<<< HEAD
-        }
-=======
 
             case "Player":
                 GameState.instance.UpdateHealth(-5f);
                 break;
+        }
     }
->>>>>>> origin/master
 
         
 
             //Destroy(rbody);
-    }
     private void onDestroy() {
         Instantiate(particleEffect, transform.position, transform.rotation);
         Destroy(gameObject);
