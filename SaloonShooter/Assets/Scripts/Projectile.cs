@@ -42,7 +42,15 @@ public class Projectile : MonoBehaviour {
                 }
                 onDestroy();
                 break;
+<<<<<<< HEAD
         }
+=======
+
+            case "Player":
+                GameState.instance.UpdateHealth(-5f);
+                break;
+    }
+>>>>>>> origin/master
 
         
 
