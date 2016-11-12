@@ -12,8 +12,9 @@ public class Turret : MonoBehaviour {
     void Start () {
 
         m_transform = transform;
-	
-	}
+        m_player = GameObject.FindGameObjectWithTag("Player");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,6 +22,8 @@ public class Turret : MonoBehaviour {
         m_relativePos = m_player.transform.position - m_transform.position;
         m_rotation = Quaternion.LookRotation(m_relativePos);
         m_transform.rotation = m_rotation;
+
+        
 
     }
 }
