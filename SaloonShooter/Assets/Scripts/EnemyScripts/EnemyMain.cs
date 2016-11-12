@@ -166,8 +166,6 @@ public class EnemyMain : MonoBehaviour
 
         m_transform.Translate(new Vector3(0, 0, 1) * m_speed * Time.deltaTime, Space.Self);
 
-        Debug.Log(m_distancetraveled);
-        Debug.Log(m_traveldistance);
     }
 
     void Attacking()
