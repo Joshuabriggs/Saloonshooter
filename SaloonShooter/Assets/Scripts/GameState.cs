@@ -58,6 +58,7 @@ public class GameState : MonoBehaviour {
     {
         m_health -= _damage;
         m_healthBar.fillAmount = m_health / 50f;
+        Debug.Log(m_health);
 
     }
 

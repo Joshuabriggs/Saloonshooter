@@ -40,6 +40,10 @@ public class Projectile : MonoBehaviour {
                 }
                 Destroy(gameObject);
                 break;
+
+            case "Player":
+                GameState.instance.PlayerHit(5f);
+                break;
     }
 
         
