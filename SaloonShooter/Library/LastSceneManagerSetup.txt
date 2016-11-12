@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Josh's new playground.unity
+- path: Assets/Scenes/Patryk.unity
   isLoaded: 1
   isActive: 1
