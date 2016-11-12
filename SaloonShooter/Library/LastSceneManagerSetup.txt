@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Callum-New.unity
+=======
+- path: Assets/Scenes/Josh's new playground.unity
+>>>>>>> origin/master
   isLoaded: 1
   isActive: 1
