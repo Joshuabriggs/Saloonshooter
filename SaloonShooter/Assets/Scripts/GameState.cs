@@ -8,6 +8,10 @@ public class GameState : MonoBehaviour {
     int m_score;
     public int m_level;
     float m_health = 50;
+    float m_maxHealth = 50f;
+
+    float deltaHealth = 0f;
+    float healthBarSpeed = 6f;
 
     //GameObjects
     //[SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
@@ -20,10 +24,54 @@ public class GameState : MonoBehaviour {
     [SerializeField] Text m_scoreDisplay;
     [SerializeField] Image m_reloadBar;
     [SerializeField] Image m_healthBar;
+    [SerializeField] Text m_healthText;
+
+
+    void Update()
+    {
+        if(deltaHealth != 0)
+        {
+            //deplete health
+            if (deltaHealth < -Time.deltaTime * healthBarSpeed)
+            {
+                m_health -= Time.deltaTime * healthBarSpeed;
+                deltaHealth += Time.deltaTime * healthBarSpeed;
+                UpdateHealthUI();
+            }
+
+            //gain health
+            else if (deltaHealth > Time.deltaTime * healthBarSpeed)
+            {
+                m_health += Time.deltaTime * healthBarSpeed;
+                deltaHealth += Time.deltaTime * healthBarSpeed;
+                UpdateHealthUI();
+            }
+            else
+            {
+                m_health += deltaHealth;
+                deltaHealth = 0;
+                UpdateHealthUI();
+            }
+        }
+
+    }
 
     public void UpdateReloadBar(float _amount)
     {
         m_reloadBar.fillAmount = _amount;
+        
+    }
+
+    public void UpdateHealthUI()
+    {
+        m_healthBar.fillAmount = m_health / 50f;
+        m_healthText.text = "" + (int)m_health;
+
+        if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
+        {
+            m_healthBar.material.color = Color.red;
+        }
+
     }
 
     public void AddScore(int _delta)
@@ -54,10 +102,17 @@ public class GameState : MonoBehaviour {
 
     }
 
-    public void PlayerHit(float _damage)
+    public void UpdateHealth(float _delta)
     {
-        m_health -= _damage;
+
+        deltaHealth += _delta;
+
+        //Old health system
+        /*m_health += _delta;
         m_healthBar.fillAmount = m_health / 50f;
+        Debug.Log(m_health);*/
+
+        
 
     }
 
