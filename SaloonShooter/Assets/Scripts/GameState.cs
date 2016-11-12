@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
 
@@ -78,12 +79,19 @@ public class GameState : MonoBehaviour {
     {
         m_score += _delta;
         m_scoreDisplay.text = "Score: " + m_score;
-
+        
     }
 
-    public void AddWave(int _delta)
+    public void UpgradeMenu()
     {
-        m_wave += _delta;
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("UpgradeMenu", LoadSceneMode.Additive);
+    }
+
+    public void NextWave()
+    {
+        Time.timeScale = 1f;
+        m_wave ++;
         m_waveDisplay.text = "Wave: " + (m_wave+1);
     }
 

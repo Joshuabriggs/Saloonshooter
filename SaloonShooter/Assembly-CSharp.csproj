@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerControll.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\UpgradeMenu.cs" />
      <Compile Include="Assets\Scripts\Wave.cs" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
