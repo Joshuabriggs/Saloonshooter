@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
 
-    int m_score;
+    public int m_score;
     public int m_wave;
 
     //Player stats
