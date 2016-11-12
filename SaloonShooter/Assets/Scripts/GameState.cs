@@ -29,6 +29,7 @@ public class GameState : MonoBehaviour {
     [SerializeField] Image m_reloadBar;
     [SerializeField] Image m_healthBar;
     [SerializeField] Text m_healthText;
+    [SerializeField] Text m_maxHealthText;
 
 
     void Update()
@@ -68,12 +69,21 @@ public class GameState : MonoBehaviour {
 
     public void UpdateHealthUI()
     {
-        m_healthBar.fillAmount = m_health / 50f;
-        m_healthText.text = (int)m_health + "/" + m_maxHealth;
+        m_healthBar.fillAmount = m_health / m_maxHealth;
+        m_healthText.text = (int)m_health + "";
+        m_maxHealthText.text = "/" + m_maxHealth;
 
-        if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
+        if(m_health >= m_maxHealth - (m_maxHealth * 0.5))
         {
-            //m_healthBar.material.color = Color.red;
+            m_healthBar.color = Color.green;
+        }
+        else if(m_health >= m_maxHealth - (m_maxHealth * 0.8))
+        {
+            m_healthBar.color = new Color(1f, 0.6f, 0);
+        }
+        else
+        {
+            m_healthBar.color = Color.red;
         }
 
     }

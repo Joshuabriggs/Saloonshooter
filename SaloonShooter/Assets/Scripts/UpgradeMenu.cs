@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 public class UpgradeMenu : MonoBehaviour {
 
 	
+    void Start()
+    {
+        Cursor.visible = true;
+    }
+
     public void OnNextWave()
-    {    
+    {
+        Cursor.visible = false;
         GameState.instance.NextWave();
         SceneManager.UnloadScene("UpgradeMenu");
     }
