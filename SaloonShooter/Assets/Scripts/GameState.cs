@@ -44,6 +44,11 @@ public class GameState : MonoBehaviour {
         Destroy(_enemy.gameObject);
     }
 
+    public void HitEnemy(EnemyMain _enemy, float _damage)
+    {
+        _enemy.ChangeHealth(_damage);
+    }
+
     public static GameState instance = null;
 
     void Awake()

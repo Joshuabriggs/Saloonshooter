@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour {
     private Rigidbody rbody;
     public bool Spin = false;
 
+    float m_damage = 10f;
+
 	// Use this for initialization
 	void Start () {
         rbody = this.GetComponent<Rigidbody>();
@@ -21,8 +23,23 @@ public class Projectile : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col) {
-        if(col.gameObject.tag == "Ground"){
-            Spin = false;
+        switch (col.gameObject.tag) {
+            case "Ground":
+                Spin = false;
+                break;
+
+            case "Enemy":
+                if(col.gameObject.GetComponent<EnemyMain>() != null)
+                {
+                    GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
+                }
+                else
+                {
+                    Debug.LogError("Missing EnemyMain script on enemy! Errors may happen!");
+                }
+                
+                break;
+    }
             //Destroy(rbody);
         }
     }
