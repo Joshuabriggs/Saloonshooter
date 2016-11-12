@@ -793,6 +793,7 @@ GameObject:
   - 222: {fileID: 494977683}
   - 114: {fileID: 494977682}
   - 114: {fileID: 494977681}
+  - 114: {fileID: 494977684}
   m_Layer: 5
   m_Name: Small Beer of Healing
   m_TagString: Untagged
@@ -893,6 +894,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 494977679}
+--- !u!114 &494977684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494977679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147482257
 --- !u!1 &499227542
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +917,7 @@ GameObject:
   - 222: {fileID: 499227546}
   - 114: {fileID: 499227545}
   - 114: {fileID: 499227544}
+  - 114: {fileID: 499227547}
   m_Layer: 5
   m_Name: Oversized Beer of Healing
   m_TagString: Untagged
@@ -1004,6 +1018,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499227542}
+--- !u!114 &499227547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499227542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147482257
 --- !u!1 &551166953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1184,7 @@ GameObject:
   - 222: {fileID: 628248328}
   - 114: {fileID: 628248327}
   - 114: {fileID: 628248326}
+  - 114: {fileID: 628248329}
   m_Layer: 5
   m_Name: Hyperactive Beer
   m_TagString: Untagged
@@ -1258,6 +1285,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 628248324}
+--- !u!114 &628248329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 628248324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147482257
 --- !u!1 &650257181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1513,7 @@ GameObject:
   - 222: {fileID: 913832784}
   - 114: {fileID: 913832783}
   - 114: {fileID: 913832782}
+  - 114: {fileID: 913832785}
   m_Layer: 5
   m_Name: Movement Upgrade
   m_TagString: Untagged
@@ -1574,6 +1614,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 913832780}
+--- !u!114 &913832785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913832780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 100
 --- !u!1 &968000708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1829,7 @@ GameObject:
   - 222: {fileID: 1092245847}
   - 114: {fileID: 1092245846}
   - 114: {fileID: 1092245845}
+  - 114: {fileID: 1092245848}
   m_Layer: 5
   m_Name: Medium Beer of Healing
   m_TagString: Untagged
@@ -1877,6 +1930,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1092245843}
+--- !u!114 &1092245848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092245843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147482257
 --- !u!1 &1097024477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,6 +2101,7 @@ GameObject:
   - 222: {fileID: 1197470084}
   - 114: {fileID: 1197470083}
   - 114: {fileID: 1197470082}
+  - 114: {fileID: 1197470085}
   m_Layer: 5
   m_Name: Revolver
   m_TagString: Untagged
@@ -2136,6 +2202,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1197470080}
+--- !u!114 &1197470085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197470080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147483647
 --- !u!1 &1200668838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2299,7 @@ GameObject:
   - 222: {fileID: 1257683889}
   - 114: {fileID: 1257683888}
   - 114: {fileID: 1257683887}
+  - 114: {fileID: 1257683890}
   m_Layer: 5
   m_Name: Turret
   m_TagString: Untagged
@@ -2332,6 +2411,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257683885}
+--- !u!114 &1257683890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257683885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147483647
 --- !u!1 &1306873935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2529,7 @@ GameObject:
   - 222: {fileID: 1312091783}
   - 114: {fileID: 1312091782}
   - 114: {fileID: 1312091781}
+  - 114: {fileID: 1312091784}
   m_Layer: 5
   m_Name: Max health
   m_TagString: Untagged
@@ -2549,6 +2641,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312091779}
+--- !u!114 &1312091784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312091779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 100
 --- !u!1 &1313619672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2891,7 @@ GameObject:
   - 222: {fileID: 1422747426}
   - 114: {fileID: 1422747425}
   - 114: {fileID: 1422747424}
+  - 114: {fileID: 1422747427}
   m_Layer: 5
   m_Name: Reload Upgrade
   m_TagString: Untagged
@@ -2898,6 +3003,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422747422}
+--- !u!114 &1422747427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422747422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 100
 --- !u!1 &1452781873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3267,7 @@ GameObject:
   - 222: {fileID: 1669830576}
   - 114: {fileID: 1669830575}
   - 114: {fileID: 1669830574}
+  - 114: {fileID: 1669830577}
   m_Layer: 5
   m_Name: Revolver Ammo
   m_TagString: Untagged
@@ -3250,6 +3368,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669830572}
+--- !u!114 &1669830577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669830572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147483647
 --- !u!1 &1719976827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,6 +3460,7 @@ GameObject:
   - 222: {fileID: 1742570917}
   - 114: {fileID: 1742570916}
   - 114: {fileID: 1742570915}
+  - 114: {fileID: 1742570918}
   m_Layer: 5
   m_Name: Large Beer of Healing
   m_TagString: Untagged
@@ -3430,6 +3561,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742570913}
+--- !u!114 &1742570918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742570913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a838042d834a5c1479ad938f2c0386dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2147482257
 --- !u!1 &1795240139
 GameObject:
   m_ObjectHideFlags: 0
