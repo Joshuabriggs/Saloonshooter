@@ -27,6 +27,7 @@ public class Potion : MonoBehaviour {
             if(Input.GetKey(KeyCode.H))
             {
                 GameState.instance.UpdateHealth(-25f);
+                m_player.GetComponent<PlayerControll>().m_drunkspin++;
                 Destroy(gameObject);
             }
         }

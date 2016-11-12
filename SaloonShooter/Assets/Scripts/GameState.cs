@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
 
     int m_score;
-    public int m_level;
+    public int m_wave;
     float m_health = 50;
     float m_maxHealth = 50f;
 
@@ -14,13 +15,13 @@ public class GameState : MonoBehaviour {
     float healthBarSpeed = 6f;
 
     //GameObjects
-    //[SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
 
     //Lists
     List<EnemyMain> m_enemies = new List<EnemyMain>();
 
     //UI
-    [SerializeField] Text m_levelDisplay;
+    [SerializeField] Text m_waveDisplay;
     [SerializeField] Text m_scoreDisplay;
     [SerializeField] Image m_reloadBar;
     [SerializeField] Image m_healthBar;
@@ -69,7 +70,7 @@ public class GameState : MonoBehaviour {
 
         if(m_health >= m_maxHealth / 4 + m_maxHealth / 2)
         {
-            m_healthBar.material.color = Color.red;
+            //m_healthBar.material.color = Color.red;
         }
 
     }
@@ -78,19 +79,26 @@ public class GameState : MonoBehaviour {
     {
         m_score += _delta;
         m_scoreDisplay.text = "Score: " + m_score;
-
+        
     }
 
-    public void AddLevel(int _delta)
+    public void UpgradeMenu()
     {
-        m_level += _delta;
-        m_levelDisplay.text = "Level: " + m_level;
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("UpgradeMenu", LoadSceneMode.Additive);
     }
 
-    public void SpawnEnemy(Vector3 _pos)
+    public void NextWave()
     {
-        //GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
-        //m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
+        Time.timeScale = 1f;
+        m_wave ++;
+        m_waveDisplay.text = "Wave: " + (m_wave+1);
+    }
+
+    public void SpawnEnemy(int _type, Vector3 _pos)
+    {
+        GameObject newEnemy = (GameObject)Instantiate(m_enemyPrefabs[Random.Range(0, m_enemyPrefabs.Count)], _pos, Quaternion.identity);
+        m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
     public void DestroyEnemy(EnemyMain _enemy)
