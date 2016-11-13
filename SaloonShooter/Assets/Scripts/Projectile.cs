@@ -31,7 +31,10 @@ public class Projectile : MonoBehaviour {
                 Spin = false;
                 onDestroy();
                 break;
-
+            case "Glass":
+                Destroy(col.gameObject);
+                onDestroy();                
+                break;
             case "Enemy_01":
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
