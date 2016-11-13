@@ -55,7 +55,14 @@ public class Projectile : MonoBehaviour {
                 onDestroy();
                 break;
             case "Player":
-                GameState.instance.UpdateHealth(-5f);
+                if (gameObject.tag == "Bottle")
+                {
+
+                }
+                else
+                {
+                    GameState.instance.UpdateHealth(-5f);
+                }
                 break;
         }
     }
