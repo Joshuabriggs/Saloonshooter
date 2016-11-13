@@ -176,7 +176,7 @@ public class GameState : MonoBehaviour {
             //AddANewDoor();
         }
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControll>().m_drunkspin = 0;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().eulerAngles = new Vector3(0, -90, 0);
         
 
         for(int i = 0; i < 3; i++)

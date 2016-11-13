@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Patryk.unity
-=======
-- path: Assets/Scenes/Game.unity
->>>>>>> origin/master
   isLoaded: 1
   isActive: 1
