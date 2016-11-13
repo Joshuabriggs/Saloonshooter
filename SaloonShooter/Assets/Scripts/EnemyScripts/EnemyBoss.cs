@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyBoss : MonoBehaviour
 {
 
-	private float m_attacktimer = 30f;
+    private float m_attacktimer = 30f;
     private Vector3 m_shotSpawn;
     private Transform m_transform;
     private Transform m_guntransform;
@@ -14,6 +14,7 @@ public class EnemyBoss : MonoBehaviour
     public GameObject m_bullet;
     public bool m_run;
     private int m_deathtimer = 100;
+    public GameObject m_boom;
 
 
     // Use this for initialization
@@ -50,11 +51,12 @@ public class EnemyBoss : MonoBehaviour
             {
                 if (GetComponent<EnemyMain>().m_atbar == true)
                 {
-                
-                        m_body.AddForce(new Vector3(0, 500f, 500f));
-                        m_isdead = true;
-                        GameState.instance.UpdateHealth(-40f);
-        
+
+                    Instantiate(m_boom, m_transform.position + new Vector3(0, 3), Quaternion.identity);
+                    m_body.AddForce(new Vector3(0, 500f, 500f));
+                    m_isdead = true;
+                    GameState.instance.UpdateHealth(-40f);
+
 
                     m_transform.eulerAngles = new Vector3(0, 0, 0);
 
