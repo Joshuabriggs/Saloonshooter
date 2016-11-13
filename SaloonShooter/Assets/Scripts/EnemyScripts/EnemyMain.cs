@@ -36,7 +36,7 @@ public class EnemyMain : MonoBehaviour
         m_path = Random.Range(1, 4);
         m_travelling = 1;
         m_body = GetComponent<Rigidbody>();
-        m_player = GameObject.FindGameObjectWithTag("Player");
+        m_player = GameObject.FindGameObjectWithTag("MainCamera");
         m_startRotation = new Vector3(0, 180, 0);
         m_bossmove = 1;
         m_atbar = false;

@@ -64,7 +64,13 @@ public class UpgradeMenu : MonoBehaviour {
 
     public void OnTurretCreate()
     {
-        GameState.instance.AddScore(-500);
+        if (GameState.instance.m_turretCount < 2)
+        {
+            GameState.instance.AddScore(-500);
+            GameState.instance.TurretCreate();
+
+        }
+        
 
         UpdateButtons();
     }

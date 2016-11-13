@@ -5,6 +5,8 @@ public class FireProjectile : MonoBehaviour {
 
     public GameObject bProjectile;
     public GameObject rProjectile;
+    public GameObject m_revolver;
+    public GameObject m_bottle;
     private GameObject Projectile;
     public Transform ProjectileSpawnPoint;
     [HideInInspector]
@@ -25,6 +27,9 @@ public class FireProjectile : MonoBehaviour {
         switch(GameState.instance.m_currentWeapon)
         {
             case 1:
+
+                m_revolver.SetActive(false);
+                m_bottle.SetActive(true);
                 GameState.instance.UpdateReloadBar((Time.time - timeAtReload) / GameState.instance.reloadTime);
                 Debug.Log((Time.time - timeAtReload) / GameState.instance.reloadTime);
                 Projectile = bProjectile;
@@ -40,6 +45,9 @@ public class FireProjectile : MonoBehaviour {
 
             case 2:
 
+                m_revolver.SetActive(true);
+                m_bottle.SetActive(false);
+                m_revolver.GetComponent<Animator>().enabled = true;
                 GameState.instance.UpdateReloadBar((Time.time - timeAtReload) / GameState.instance.m_rRealoadTime);
                 Debug.Log((Time.time - timeAtReload) / GameState.instance.m_rRealoadTime);
                 Projectile = rProjectile;
