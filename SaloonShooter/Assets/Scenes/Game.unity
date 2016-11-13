@@ -9070,7 +9070,7 @@ Transform:
   - {fileID: 2108054847}
   - {fileID: 1312800417}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
 --- !u!4 &765184935 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4731bf09631cdf448b26cc88aa93acb0, type: 3}
@@ -20174,6 +20174,9 @@ MonoBehaviour:
   m_rRealoadTime: 5
   m_currentWeapon: 1
   m_shotCount: 6
+  m_turretCount: 0
+  m_revolver: 0
+  m_turret: {fileID: 0}
   m_enemyPrefabs:
   - {fileID: 181750, guid: 368e72f98faddd048bb2995d1d55bb90, type: 2}
   - {fileID: 129674, guid: 4d3650532bbc9f94a95b8c89f764e294, type: 2}
@@ -20198,7 +20201,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &1632540613 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4731bf09631cdf448b26cc88aa93acb0, type: 3}
@@ -21094,7 +21097,7 @@ Transform:
   m_Children:
   - {fileID: 1339000471}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1001 &1703985974
 Prefab:
   m_ObjectHideFlags: 0
@@ -24020,27 +24023,6 @@ BoxCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4731bf09631cdf448b26cc88aa93acb0, type: 3}
   m_PrefabInternal: {fileID: 1296629449}
---- !u!1 &1916755515 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 114504, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
-  m_PrefabInternal: {fileID: 1646671281}
---- !u!114 &1916755523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1916755515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downsample: 0
-  blurSize: 0
-  blurIterations: 1
-  m_blur: 0
-  blurType: 0
-  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!1 &1918439476
 GameObject:
   m_ObjectHideFlags: 0
@@ -26409,7 +26391,7 @@ Transform:
   - {fileID: 1258161336}
   - {fileID: 527211482}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 17
 --- !u!1001 &2104298574
 Prefab:
   m_ObjectHideFlags: 0

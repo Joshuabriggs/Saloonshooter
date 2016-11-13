@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19869390}
   - 199: {fileID: 19927798}
   m_Layer: 0
-  m_Name: DustParticleEffect
+  m_Name: DustParticleEffectCopy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
