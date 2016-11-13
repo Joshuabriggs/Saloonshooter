@@ -22,7 +22,7 @@ public class MainMenuScript : MonoBehaviour {
 	
         if(m_gameBegin)
         {
-            m_menuCam.transform.position = Vector3.MoveTowards(m_menuCam.transform.position, m_goto.position, 70f * Time.deltaTime);
+            m_menuCam.transform.position = Vector3.MoveTowards(m_menuCam.transform.position, new Vector3(m_goto.position.x, m_goto.position.y + 5f, m_goto.position.z), 70f * Time.deltaTime);
             Quaternion wanted_rotation = Quaternion.LookRotation(-m_goto.transform.position);
             m_menuCam.transform.rotation = Quaternion.RotateTowards(m_menuCam.transform.rotation, wanted_rotation, Time.deltaTime * 200);
         }
@@ -34,6 +34,11 @@ public class MainMenuScript : MonoBehaviour {
         m_gameBegin = true;
         StartCoroutine(DisableDelay());
         StartCoroutine(WaypointChange());
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     IEnumerator WaypointChange()

@@ -674,7 +674,6 @@ MonoBehaviour:
   m_travelling: 0
   m_atbar: 0
   m_transform: {fileID: 0}
-  m_boom: {fileID: 0}
 --- !u!136 &13633868
 CapsuleCollider:
   m_ObjectHideFlags: 1
