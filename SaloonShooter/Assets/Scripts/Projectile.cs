@@ -31,7 +31,10 @@ public class Projectile : MonoBehaviour {
                 Spin = false;
                 onDestroy();
                 break;
-
+            case "Glass":
+                Destroy(col.gameObject);
+                onDestroy();                
+                break;
             case "Enemy_01":
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
@@ -54,8 +57,26 @@ public class Projectile : MonoBehaviour {
                 }
                 onDestroy();
                 break;
+            case "Enemy_Boss":
+                if (col.gameObject.GetComponent<EnemyMain>() != null)
+                {
+                    GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
+                }
+                else
+                {
+                    Debug.LogError("Missing EnemyMain script on enemy! Errors may happen!");
+                }
+                onDestroy();
+                break;
             case "Player":
-                GameState.instance.UpdateHealth(-5f);
+                if (gameObject.tag == "Bottle")
+                {
+
+                }
+                else
+                {
+                    GameState.instance.UpdateHealth(-5f);
+                }
                 break;
         }
     }

@@ -56,7 +56,7 @@ public class EnemyMain : MonoBehaviour
             m_startLocation = m_transform.position;
             m_health = 10f;
         }
-        if (gameObject.name == "EnemyBoss" || gameObject.name == "EnemyBoss(Clone)")
+        if (gameObject.tag == "Enemy_Boss")
         {
             m_enemytype = 3;
             m_health = 100f;
@@ -103,7 +103,7 @@ public class EnemyMain : MonoBehaviour
 
         if (m_health <= 0)
         {
-            GameState.instance.DestroyEnemy(this);
+            GameState.instance.DestroyEnemy(this, true);
             Debug.Log("Enemy is dead :(");
         }
 

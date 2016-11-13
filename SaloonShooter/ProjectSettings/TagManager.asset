@@ -11,6 +11,12 @@ TagManager:
   - Enemy_02
   - Enemy
   - ShopButton
+  - Bottle
+  - Glass
+  - LargeBeer
+  - MediumBeer
+  - SmallBeer
+  - OversizedBeer
   layers:
   - Default
   - TransparentFX

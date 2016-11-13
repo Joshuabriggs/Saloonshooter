@@ -16,13 +16,19 @@ public class GameState : MonoBehaviour {
     public float m_rRealoadTime = 5f;
     public int m_currentWeapon = 1;
     public int m_shotCount = 6;
+    public int m_turretCount = 0;
+    public bool m_revolver = false;
+    public GameObject m_turret;
 
 
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
 
+    [SerializeField] Transform m_spawnGates;
+
     //GameObjects
     [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    [SerializeField] GameObject m_door;
 
     //Lists
     public List<EnemyMain> m_enemies = new List<EnemyMain>();
@@ -78,15 +84,28 @@ public class GameState : MonoBehaviour {
 
     }
 
-    public void ChangeWeapon(int _choice)
-    {
-        
-    }
+    
 
     public void UpdateReloadBar(float _amount)
     {
         m_reloadBar.fillAmount = _amount;
         
+    }
+
+    public void TurretCreate()
+    {
+        switch(m_turretCount)
+        {
+            case 0:
+                Instantiate(m_turret, new Vector3(9, 10, -6), Quaternion.identity);
+                    break;
+
+            case 1:
+                Instantiate(m_turret, new Vector3(-9, 10, -6), Quaternion.identity);
+                break;
+        }
+
+        m_turretCount++;
     }
 
     public void UpdateHealthUI()
@@ -132,6 +151,20 @@ public class GameState : MonoBehaviour {
         Time.timeScale = 1f;
         m_wave ++;
         m_waveDisplay.text = "Wave: " + (m_wave+1);
+
+        if(m_wave == 1)
+        {
+            AddANewDoor();
+        }
+
+    }
+
+    void AddANewDoor()
+    {
+        GameObject newDoor = Instantiate(m_door);
+        newDoor.transform.parent = m_spawnGates.transform;
+        GetComponent<EnemySpawning>().UpdateSpawnGates();
+        Debug.Log("NEW DOOR");
     }
 
     public void SpawnEnemy(int _type, Vector3 _pos)
@@ -140,12 +173,16 @@ public class GameState : MonoBehaviour {
         m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
-    public void DestroyEnemy(EnemyMain _enemy)
+    public void DestroyEnemy(EnemyMain _enemy, bool _killed)
     {
         m_enemies.Remove(_enemy);
         Destroy(_enemy.gameObject);
 
-        AddScore(10);
+        if(_killed)
+        {
+            AddScore(10);
+        }
+        
 
     }
 

@@ -663,6 +663,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -729,6 +733,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -1948,6 +1956,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -2347,6 +2359,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 762698461}
   m_RootOrder: 121
+--- !u!1001 &170438848
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923892562}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.268
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0043
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Name
+      value: Bottle-HighPoly-Untextured (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &174682186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,7 +3220,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0.5}
   m_Axis: {x: 0, y: 15, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -8.25518, y: 1.42, z: 47.064}
+  m_ConnectedAnchor: {x: 1.9181805, y: 1.42, z: 47.064}
   m_UseSpring: 1
   m_Spring:
     spring: 6
@@ -3453,6 +3531,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb1ba61456620864e8e57ac851e2ed41, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -3720,6 +3802,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -3786,6 +3872,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -4655,8 +4745,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.2600446, y: 0.9999995, z: 0.99999464}
+  m_Center: {x: -0.6300359, y: 0, z: -0.00000016774143}
 --- !u!33 &377306866
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5667,6 +5757,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -5923,6 +6017,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -6713,7 +6811,7 @@ GameObject:
   - 4: {fileID: 521176903}
   - 65: {fileID: 521176902}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: DoorL_Bounce2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6803,6 +6901,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -7563,6 +7665,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -8022,6 +8128,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -8498,6 +8608,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -8588,7 +8702,7 @@ GameObject:
   - 4: {fileID: 640074275}
   - 65: {fileID: 640074274}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: DoorR_Bounce2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8888,6 +9002,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.009368757, y: 0.008264955, z: 0.010348436}
   m_Center: {x: -3.4924597e-10, y: -0.0008675832, z: -0.000000015832484}
+--- !u!1 &705065544 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_PrefabInternal: {fileID: 170438848}
+--- !u!65 &705065546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705065544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019694481, y: 0.0843093, z: 0.019694487}
+  m_Center: {x: 0.0000000013969839, y: 0.009862524, z: 4.6566126e-10}
+--- !u!54 &705065547
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705065544}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &706793851 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4731bf09631cdf448b26cc88aa93acb0, type: 3}
@@ -9417,6 +9562,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -9960,6 +10109,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -12310,6 +12463,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -12560,6 +12717,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -13282,6 +13443,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -13344,6 +13509,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -13634,6 +13803,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -15110,8 +15283,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1698124, y: 0.9999995, z: 0.99999493}
+  m_Center: {x: -0.584903, y: 0, z: -0.000040485014}
 --- !u!33 &1142423988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15314,7 +15487,7 @@ GameObject:
   - 4: {fileID: 1160722601}
   - 65: {fileID: 1160722600}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DoorL_Bounce1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15404,6 +15577,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb1ba61456620864e8e57ac851e2ed41, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -15885,6 +16062,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb1ba61456620864e8e57ac851e2ed41, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -16205,6 +16386,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -16364,6 +16549,7 @@ GameObject:
   - 4: {fileID: 1259130411}
   - 33: {fileID: 1259130410}
   - 23: {fileID: 1259130409}
+  - 65: {fileID: 1259130412}
   m_Layer: 0
   m_Name: Cylinder (89)
   m_TagString: Untagged
@@ -16417,6 +16603,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 762698461}
   m_RootOrder: 80
+--- !u!65 &1259130412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259130408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.00000029802322, y: 0.0000015497208, z: -0.00000008940697}
 --- !u!1 &1260215429
 GameObject:
   m_ObjectHideFlags: 0
@@ -16740,6 +16938,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -16888,6 +17090,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -17258,6 +17464,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -17757,34 +17967,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.009368757, y: 0.008264955, z: 0.010348436}
   m_Center: {x: -3.4924597e-10, y: -0.0008675832, z: -0.000000014901161}
---- !u!1 &1339000470
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1339000471}
-  m_Layer: 0
-  m_Name: Door 1
-  m_TagString: Untagged
-  m_Icon: {fileID: -1089502233064743932, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1339000471
+--- !u!4 &1339000471 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1339000470}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.326, y: -2.042, z: 51.304}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1702833876}
-  m_RootOrder: 0
+  m_PrefabParentObject: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+  m_PrefabInternal: {fileID: 1833320829}
 --- !u!1001 &1341278579
 Prefab:
   m_ObjectHideFlags: 0
@@ -18171,7 +18357,7 @@ GameObject:
   - 4: {fileID: 1402652900}
   - 65: {fileID: 1402652899}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: DoorR_Bounce1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18685,6 +18871,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -19161,6 +19351,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -19755,6 +19949,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -19883,6 +20081,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -20117,6 +20319,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -20373,6 +20579,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 24be61e21542d7b4b9796b17a8559c97, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -20713,12 +20923,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyTypes: 1
+  - enemiesInWave: 0000000000000000000000000000000000000000
     spawnInterval: 2
-    maxEnemies: 5
-  - enemyTypes: 2
+  - enemiesInWave: 00000000000000000000000001000000010000000000000000000000010000000100000000000000
+    spawnInterval: 4
+  - enemiesInWave: 0000000001000000020000000000000000000000
     spawnInterval: 3
-    maxEnemies: 15
   timeBetweenWaves: 5
 --- !u!114 &1629142217
 MonoBehaviour:
@@ -20731,12 +20941,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d948b29faee10e46897c87e10654813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_score: 0
   m_wave: 0
   m_maxHealth: 50
   reloadTime: 1
+  m_rRealoadTime: 5
+  m_currentWeapon: 1
+  m_shotCount: 6
+  m_turretCount: 0
+  m_revolver: 0
+  m_turret: {fileID: 0}
+  m_spawnGates: {fileID: 1702833876}
   m_enemyPrefabs:
   - {fileID: 181750, guid: 368e72f98faddd048bb2995d1d55bb90, type: 2}
-  - {fileID: 131184, guid: 4d3650532bbc9f94a95b8c89f764e294, type: 2}
+  - {fileID: 129674, guid: 4d3650532bbc9f94a95b8c89f764e294, type: 2}
+  m_door: {fileID: 197470, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
   m_enemies: []
   m_waveDisplay: {fileID: 1920323386}
   m_scoreDisplay: {fileID: 882202671}
@@ -20744,6 +20963,8 @@ MonoBehaviour:
   m_healthBar: {fileID: 215485810}
   m_healthText: {fileID: 876271876}
   m_maxHealthText: {fileID: 997800332}
+  m_mainUI: {fileID: 893578430}
+  m_deadUI: {fileID: 0}
 --- !u!4 &1629142218
 Transform:
   m_ObjectHideFlags: 0
@@ -20842,49 +21063,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.22
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.57
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalPosition.z
       value: -9.81
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.7071067
       objectReference: {fileID: 0}
-    - target: {fileID: 429804, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+    - target: {fileID: 465404, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11417986, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
-      propertyPath: minimumX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11417986, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
-      propertyPath: maximumX
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5411918, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
-      propertyPath: m_Constraints
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
@@ -22900,9 +23109,122 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
+--- !u!1001 &1806005543
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923892562}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2564
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0159
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70223
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70222986
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.08290481
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.082904816
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_RootOrder
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Name
+      value: Bottle-HighPoly-Untextured (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 193.4663
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1806005544 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_PrefabInternal: {fileID: 1806005543}
+--- !u!65 &1806005545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806005544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019694481, y: 0.0843093, z: 0.019694487}
+  m_Center: {x: 0.0000000013969839, y: 0.009862524, z: 4.6566126e-10}
+--- !u!54 &1806005546
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806005544}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1808507152
 GameObject:
   m_ObjectHideFlags: 0
@@ -23114,6 +23436,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -23195,6 +23521,52 @@ Transform:
   - {fileID: 1042178842}
   m_Father: {fileID: 762698461}
   m_RootOrder: 105
+--- !u!1001 &1833320829
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1702833876}
+    m_Modifications:
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.326
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 51.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417760, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 197470, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+      propertyPath: m_Name
+      value: Door 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f4d6cbc228dfd77428e3831bb1c66b01, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1835271058
 GameObject:
   m_ObjectHideFlags: 0
@@ -23207,7 +23579,7 @@ GameObject:
   - 154: {fileID: 1835271059}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23266,6 +23638,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &1836179261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1836179263}
+  - 82: {fileID: 1836179262}
+  m_Layer: 0
+  m_Name: Epic Wild Western Music - Rowdy Cowboys (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1836179262
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836179261}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: aea3180834be8a148a4bca21dd18de31, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1836179263
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836179261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
 --- !u!1 &1839475895
 GameObject:
   m_ObjectHideFlags: 0
@@ -23832,6 +24307,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bb1ba61456620864e8e57ac851e2ed41, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -24578,27 +25057,103 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019694481, y: 0.0843093, z: 0.019694487}
   m_Center: {x: -0.00000005820766, y: 0.009862524, z: 4.6566126e-10}
---- !u!1 &1916755515 stripped
+--- !u!1001 &1919923793
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923892562}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2847
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0043
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4556
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Name
+      value: Bottle-HighPoly-Untextured (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1919923794 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 114504, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
-  m_PrefabInternal: {fileID: 1646671281}
---- !u!114 &1916755523
-MonoBehaviour:
+  m_PrefabParentObject: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+  m_PrefabInternal: {fileID: 1919923793}
+--- !u!65 &1919923795
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1916755515}
+  m_GameObject: {fileID: 1919923794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downsample: 0
-  blurSize: 0
-  blurIterations: 1
-  m_blur: 0
-  blurType: 0
-  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.019694481, y: 0.0843093, z: 0.019694487}
+  m_Center: {x: 0.0000000013969839, y: 0.009862524, z: 4.6566126e-10}
+--- !u!54 &1919923796
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919923794}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1920323384
 GameObject:
   m_ObjectHideFlags: 0
@@ -25911,6 +26466,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -26156,6 +26715,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -26295,6 +26858,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
@@ -26427,6 +26994,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cfe4ce401e3c0b2439ba8f79899afdf3, type: 2}
+    - target: {fileID: 100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
+      propertyPath: m_TagString
+      value: Glass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69607cd90d06cc04fa4447b1857beeb2, type: 3}
   m_IsPrefabParent: 0
