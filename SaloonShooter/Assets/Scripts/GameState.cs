@@ -17,6 +17,7 @@ public class GameState : MonoBehaviour {
     public int m_currentWeapon = 1;
     public int m_shotCount = 6;
     public int m_turretCount = 0;
+    public bool m_revolver = false;
     public GameObject m_turret;
 
 
