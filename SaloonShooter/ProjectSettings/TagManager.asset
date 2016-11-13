@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - ShopButton
   - Bottle
+  - Enemy_Boss
   layers:
   - Default
   - TransparentFX

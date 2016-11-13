@@ -7,7 +7,7 @@ public class EnemyBoss : MonoBehaviour
     private float m_attacktimer = 30f;
     private Vector3 m_shotSpawn;
     private Transform m_transform;
-    private Transform m_guntransform;
+    public Transform m_guntransform;
     private bool m_isdead = false;
     private Rigidbody m_body;
     private GameObject m_player;
@@ -23,7 +23,6 @@ public class EnemyBoss : MonoBehaviour
 
         m_transform = transform;
         m_body = GetComponent<Rigidbody>();
-        m_guntransform = GetComponentInChildren<Transform>();
         m_player = GameObject.Find("PlayerBody");
         m_run = false;
 
@@ -34,7 +33,7 @@ public class EnemyBoss : MonoBehaviour
     void Update()
     {
 
-        m_shotSpawn = m_guntransform.position + new Vector3(0, 0, -1);
+        m_shotSpawn = m_guntransform.position;
 
         if (GetComponent<EnemyMain>().m_travelling == 2)
         {
@@ -42,7 +41,7 @@ public class EnemyBoss : MonoBehaviour
             if (m_attacktimer <= 0)
             {
                 m_attacktimer = 50f;
-                Instantiate(m_bullet, m_shotSpawn, m_transform.rotation);
+                Instantiate(m_bullet, m_shotSpawn, m_guntransform.rotation);
             }
 
             m_attacktimer -= 1;
@@ -53,7 +52,7 @@ public class EnemyBoss : MonoBehaviour
                 {
 
                     Instantiate(m_boom, m_transform.position + new Vector3(0, 3), Quaternion.identity);
-                    m_body.AddForce(new Vector3(0, 500f, 500f));
+                    m_body.AddForce(new Vector3(0, 5000f, 5000f));
                     m_isdead = true;
                     GameState.instance.UpdateHealth(-40f);
 
@@ -70,7 +69,8 @@ public class EnemyBoss : MonoBehaviour
 
                 if (m_deathtimer <= 0)
                 {
-                    DestroyObject(gameObject);
+                    GameState.instance.DestroyEnemy(gameObject.GetComponent<EnemyMain>());
+                    GameState.instance.AddScore(100);
                 }
             }
 
