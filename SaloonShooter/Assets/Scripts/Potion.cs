@@ -24,7 +24,7 @@ public class Potion : MonoBehaviour {
         {
             m_close = true;
             
-            if(Input.GetKeyUp(KeyCode.F))
+            if(Input.GetKeyUp(KeyCode.E))
             {
                 GameState.instance.UpdateHealth(25);
                 m_player.GetComponent<PlayerControll>().m_drunkspin++;
@@ -43,7 +43,7 @@ public class Potion : MonoBehaviour {
     {
         if (m_close == true)
         {
-            GUI.Label(new Rect(10, 40, 100, 20), "Press 'H' to drink");
+            GUI.Label(new Rect(Screen.width / 2-50, Screen.height / 2+40, 100, 20), "Press 'E' to drink");
         }
     }
 }

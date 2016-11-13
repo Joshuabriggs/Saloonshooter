@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSpeed: 5000
   Spin: 0
-  particleEffect: {fileID: 0}
+  particleEffect: {fileID: 189178, guid: ffac9d8a41f68e741918bb05e1a21c00, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

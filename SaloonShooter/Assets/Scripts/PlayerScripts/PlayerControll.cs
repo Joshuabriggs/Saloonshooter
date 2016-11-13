@@ -58,11 +58,11 @@ public class PlayerControll : MonoBehaviour
             keyRight = false;
         }
         //Crouch
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             KeyCrouch = true;
         }
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             KeyCrouch = false;
         }
