@@ -173,7 +173,7 @@ public class GameState : MonoBehaviour {
 
         if(m_wave == 1)
         {
-            AddANewDoor();
+            //AddANewDoor();
         }
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControll>().m_drunkspin = 0;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
