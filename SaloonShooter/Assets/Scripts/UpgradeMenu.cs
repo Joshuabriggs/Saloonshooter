@@ -62,6 +62,24 @@ public class UpgradeMenu : MonoBehaviour {
 
     }
 
+    public void OnBuySmallBeer()
+    {
+        GameState.instance.AddScore(-25);
+    }
+
+    public void OnBuyMediumBeer()
+    {
+        GameState.instance.AddScore(-50);
+    }
+    public void OnBuyLargeBeer()
+    {
+        GameState.instance.AddScore(-75);
+    }
+    public void OnBuyOversizedBeer()
+    {
+        GameState.instance.AddScore(-150);
+    }
+
     public void OnRevolverBuy()
     {
         if (GameState.instance.m_revolver == false)
