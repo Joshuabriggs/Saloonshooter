@@ -25,6 +25,7 @@ public class GameState : MonoBehaviour {
     public GameObject m_mBeer;
     public GameObject m_lBeer;
     public GameObject m_oBeer;
+    public GameObject m_hBeer;
     public GameObject m_turret;
 
 
@@ -242,6 +243,21 @@ public class GameState : MonoBehaviour {
                             break;
                         case 2:
                             Instantiate(m_oBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                    }
+                    break;
+                case 5:
+
+                    switch (i)
+                    {
+                        case 0:
+                            Instantiate(m_hBeer, new Vector3(7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 1:
+                            Instantiate(m_hBeer, new Vector3(0, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 2:
+                            Instantiate(m_hBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
                             break;
                     }
                     break;

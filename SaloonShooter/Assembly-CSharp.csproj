@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\EnemySpawning.cs" />
      <Compile Include="Assets\Scripts\GUI\Crosshair.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
+     <Compile Include="Assets\Scripts\HyperBeer.cs" />
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\Antialiasing.cs" />
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\Bloom.cs" />
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\BloomAndFlares.cs" />

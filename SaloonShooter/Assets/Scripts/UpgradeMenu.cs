@@ -105,6 +105,15 @@ public class UpgradeMenu : MonoBehaviour {
             GameState.instance.BeerCreate(4);
         }
     }
+    public void OnBuyHyperBeer()
+    {
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-100);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(5);
+        }
+    }
 
     public void OnRevolverBuy()
     {
