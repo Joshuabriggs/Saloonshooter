@@ -24,6 +24,9 @@ public class PlayerControll : MonoBehaviour
 
     private bool keyLeft, keyRight, KeyCrouch;
 
+    [SerializeField] GameObject m_clickTut;
+    [SerializeField] GameObject m_moveTut;
+
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +46,7 @@ public class PlayerControll : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             keyLeft = true;
+            m_moveTut.SetActive(false);
         }
         if (Input.GetKeyUp(KeyCode.A))
         {
@@ -52,6 +56,7 @@ public class PlayerControll : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             keyRight = true;
+            m_moveTut.SetActive(false);
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
@@ -73,6 +78,10 @@ public class PlayerControll : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             GameState.instance.m_currentWeapon = 2;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            m_clickTut.SetActive(false);
         }
     }
 
