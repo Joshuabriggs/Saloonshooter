@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Patryk.unity
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/Scenes/Patryk.unity
-=======
-- path: Assets/Scenes/UpgradeMenu.unity
-=======
 - path: Assets/Scenes/Game.unity
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
   isLoaded: 1
   isActive: 1
