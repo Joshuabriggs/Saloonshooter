@@ -62,22 +62,57 @@ public class UpgradeMenu : MonoBehaviour {
 
     }
 
+    public void OnSpeedIncrease()
+    {
+        GameState.instance.m_playerSpeed = (GameState.instance.m_playerSpeed *= 1.2f);
+        GameState.instance.AddScore(-100);
+    }
+
     public void OnBuySmallBeer()
     {
-        GameState.instance.AddScore(-25);
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-25);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(1);
+        }
     }
 
     public void OnBuyMediumBeer()
     {
-        GameState.instance.AddScore(-50);
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-50);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(2);
+        }
     }
     public void OnBuyLargeBeer()
     {
-        GameState.instance.AddScore(-75);
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-75);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(3);
+        }
     }
     public void OnBuyOversizedBeer()
     {
-        GameState.instance.AddScore(-150);
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-150);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(4);
+        }
+    }
+    public void OnBuyHyperBeer()
+    {
+        if (GameState.instance.m_beerNumber < 3)
+        {
+            GameState.instance.AddScore(-100);
+            GameState.instance.m_beerNumber++;
+            GameState.instance.BeerCreate(5);
+        }
     }
 
     public void OnRevolverBuy()

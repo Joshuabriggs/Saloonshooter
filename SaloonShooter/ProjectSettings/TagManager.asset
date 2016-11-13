@@ -17,6 +17,8 @@ TagManager:
   - MediumBeer
   - SmallBeer
   - OversizedBeer
+  - Enemy_Boss
+  - HyperBeer
   layers:
   - Default
   - TransparentFX

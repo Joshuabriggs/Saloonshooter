@@ -6,6 +6,8 @@ public class Potion : MonoBehaviour {
     private GameObject m_player;
     private int m_relativeposition;
     private int m_heal;
+    private float m_xVal;
+    private int m_beerNum;
     private Transform m_transform;
     private bool m_close;
 
@@ -33,10 +35,27 @@ public class Potion : MonoBehaviour {
         {
             m_heal = 150;
         }
+
+        m_xVal = m_transform.position.x;
+        if(m_xVal == 7)
+        {
+            m_beerNum = 0;
+        }
+        if (m_xVal == 0)
+        {
+            m_beerNum = 1;
+        }
+        if (m_xVal == -7)
+        {
+            m_beerNum = 2;
+        }
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        Debug.Log(GameState.instance.m_beerNumber);
 
         if(m_player.transform.position.x >= m_transform.position.x -1 && m_player.transform.position.x <= m_transform.position.x + 1)
         {
@@ -45,6 +64,8 @@ public class Potion : MonoBehaviour {
             if(Input.GetKeyUp(KeyCode.E))
             {
                 GameState.instance.UpdateHealth(m_heal);
+                GameState.instance.m_beerNumber--;
+                GameState.instance.m_beerStorage[m_beerNum] = 0;
                 m_player.GetComponent<PlayerControll>().m_drunkspin++;
                 Destroy(gameObject);
                 m_close=false;
