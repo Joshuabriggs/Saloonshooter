@@ -103,7 +103,7 @@ public class EnemyMain : MonoBehaviour
 
         if (m_health <= 0)
         {
-            GameState.instance.DestroyEnemy(this);
+            GameState.instance.DestroyEnemy(this, true);
             Debug.Log("Enemy is dead :(");
         }
 
