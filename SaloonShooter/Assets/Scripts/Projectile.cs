@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour {
     public float ProjectileSpeed = 100f;
     private Rigidbody rbody;
     public bool Spin = false;
+    public bool isGlass = false;
+    public AudioClip glassBreak;
 
     public GameObject particleEffect;
 
@@ -29,16 +31,24 @@ public class Projectile : MonoBehaviour {
         {
             case "Ground":
                 Spin = false;
+                if (isGlass) {
+                    AudioSource.PlayClipAtPoint(glassBreak, transform.position);
+                }         
                 onDestroy();
                 break;
             case "Glass":
                 Destroy(col.gameObject);
+                AudioSource.PlayClipAtPoint(glassBreak, transform.position);
                 onDestroy();                
                 break;
             case "Enemy_01":
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
                     GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
+                    if (isGlass)
+                    {
+                        AudioSource.PlayClipAtPoint(glassBreak, transform.position);
+                    }
                 }
                 else
                 {
@@ -50,6 +60,10 @@ public class Projectile : MonoBehaviour {
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
                     GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
+                    if (isGlass)
+                    {
+                        AudioSource.PlayClipAtPoint(glassBreak, transform.position);
+                    }
                 }
                 else
                 {
@@ -61,6 +75,10 @@ public class Projectile : MonoBehaviour {
                 if (col.gameObject.GetComponent<EnemyMain>() != null)
                 {
                     GameState.instance.HitEnemy(col.gameObject.GetComponent<EnemyMain>(), m_damage);
+                    if (isGlass)
+                    {
+                        AudioSource.PlayClipAtPoint(glassBreak, transform.position);
+                    }
                 }
                 else
                 {
@@ -71,7 +89,10 @@ public class Projectile : MonoBehaviour {
             case "Player":
                 if (gameObject.tag == "Bottle")
                 {
-
+                    if (isGlass)
+                    {
+                        AudioSource.PlayClipAtPoint(glassBreak, transform.position);
+                    }
                 }
                 else
                 {

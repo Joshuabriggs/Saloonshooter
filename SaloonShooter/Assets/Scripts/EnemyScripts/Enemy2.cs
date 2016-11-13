@@ -11,7 +11,7 @@ public class Enemy2 : MonoBehaviour {
     private GameObject m_player;
     public GameObject m_bullet;
     public bool m_run;
-
+    public GameObject m_SmokeFX;
 
     // Use this for initialization
     void Start()
@@ -38,6 +38,7 @@ public class Enemy2 : MonoBehaviour {
             {
                 m_attacktimer = 200f;
                 Instantiate(m_bullet, m_shotSpawn, m_guntransform.rotation);
+                Instantiate(m_SmokeFX, m_guntransform.position, m_guntransform.rotation);
             }
 
             m_attacktimer -= 1;

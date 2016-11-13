@@ -9,6 +9,7 @@ public class FireProjectile : MonoBehaviour {
     public GameObject m_bottle;
     private GameObject Projectile;
     public Transform ProjectileSpawnPoint;
+    public GameObject SmokeEffect;
     [HideInInspector]
     public int m_weapon;
     
@@ -33,16 +34,22 @@ public class FireProjectile : MonoBehaviour {
         {
             case 1:
                 m_revolver.SetActive(false);
-                m_bottle.SetActive(true);
+                m_bottle.SetActive(false);
                 GameState.instance.UpdateReloadBar((Time.time - timeAtReload) / GameState.instance.reloadTime);
                 //Debug.Log((Time.time - timeAtReload) / GameState.instance.reloadTime);
                 Projectile = bProjectile;
-                if (Input.GetMouseButtonDown(0))
+                if (timeAtReload <= Time.time - GameState.instance.reloadTime)
+                {
+                    m_bottle.SetActive(true);
+
+                }
+                    if (Input.GetMouseButtonDown(0))
                 {
                     if (timeAtReload <= Time.time - GameState.instance.reloadTime)
                     {
+                       
                         timeAtReload = Time.time;
-                        GameObject c_projectile = (GameObject)Instantiate(Projectile, ProjectileSpawnPoint.position, ProjectileSpawnPoint.rotation);
+                        GameObject c_projectile = (GameObject)Instantiate(Projectile, ProjectileSpawnPoint.position, ProjectileSpawnPoint.rotation);                        
                     }
                 }
                 break;
@@ -60,6 +67,7 @@ public class FireProjectile : MonoBehaviour {
                     if (GameState.instance.m_shotCount > 0)
                     {
                         GameObject c_projectile = (GameObject)Instantiate(Projectile, ProjectileSpawnPoint.position, ProjectileSpawnPoint.rotation);
+                        Instantiate(SmokeEffect, ProjectileSpawnPoint.position, ProjectileSpawnPoint.rotation);
                         GameState.instance.m_shotCount--;
                     }                   
                 }

@@ -15,7 +15,7 @@ public class EnemyBoss : MonoBehaviour
     public bool m_run;
     private int m_deathtimer = 100;
     public GameObject m_boom;
-
+    public GameObject m_SmokeFX;
 
     // Use this for initialization
     void Start()
@@ -42,6 +42,7 @@ public class EnemyBoss : MonoBehaviour
             {
                 m_attacktimer = 50f;
                 Instantiate(m_bullet, m_shotSpawn, m_guntransform.rotation);
+                Instantiate(m_SmokeFX, m_guntransform.position, m_guntransform.rotation);
             }
 
             m_attacktimer -= 1;

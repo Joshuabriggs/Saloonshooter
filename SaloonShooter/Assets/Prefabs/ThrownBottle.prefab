@@ -228,6 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSpeed: 1000
   Spin: 1
+  isGlass: 1
+  glassBreak: {fileID: 8300000, guid: 79115d58f19d02b469bec2576c41413b, type: 3}
   particleEffect: {fileID: 189178, guid: ffac9d8a41f68e741918bb05e1a21c00, type: 2}
 --- !u!1001 &100100000
 Prefab:
