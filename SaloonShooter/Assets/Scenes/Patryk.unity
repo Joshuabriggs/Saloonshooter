@@ -3142,7 +3142,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0.5}
   m_Axis: {x: 0, y: 15, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -8.25518, y: 1.42, z: 47.064}
+  m_ConnectedAnchor: {x: 1.9181805, y: 1.42, z: 47.064}
   m_UseSpring: 1
   m_Spring:
     spring: 6
@@ -6713,7 +6713,7 @@ GameObject:
   - 4: {fileID: 521176903}
   - 65: {fileID: 521176902}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: DoorL_Bounce2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8588,7 +8588,7 @@ GameObject:
   - 4: {fileID: 640074275}
   - 65: {fileID: 640074274}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: DoorR_Bounce2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15314,7 +15314,7 @@ GameObject:
   - 4: {fileID: 1160722601}
   - 65: {fileID: 1160722600}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DoorL_Bounce1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18171,7 +18171,7 @@ GameObject:
   - 4: {fileID: 1402652900}
   - 65: {fileID: 1402652899}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: DoorR_Bounce1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20731,9 +20731,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d948b29faee10e46897c87e10654813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_score: 0
   m_wave: 0
   m_maxHealth: 50
   reloadTime: 1
+  m_rRealoadTime: 5
+  m_currentWeapon: 1
+  m_shotCount: 6
   m_enemyPrefabs:
   - {fileID: 181750, guid: 368e72f98faddd048bb2995d1d55bb90, type: 2}
   - {fileID: 131184, guid: 4d3650532bbc9f94a95b8c89f764e294, type: 2}
@@ -20886,6 +20890,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 11466946, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+      propertyPath: bProjectile
+      value: 
+      objectReference: {fileID: 175198, guid: 1e38941597106344c95cd4ee6f20fe4e, type: 2}
+    - target: {fileID: 11466946, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
+      propertyPath: rProjectile
+      value: 
+      objectReference: {fileID: 173228, guid: a82c47c82897d6344a95f2bbeb85bfe5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f75f390949e2b94f9dce685dcc7a433, type: 2}
   m_IsPrefabParent: 0
@@ -23266,6 +23278,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &1836179261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1836179263}
+  - 82: {fileID: 1836179262}
+  m_Layer: 0
+  m_Name: Epic Wild Western Music - Rowdy Cowboys (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1836179262
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836179261}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: aea3180834be8a148a4bca21dd18de31, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1836179263
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836179261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
 --- !u!1 &1839475895
 GameObject:
   m_ObjectHideFlags: 0
