@@ -17,7 +17,14 @@ public class GameState : MonoBehaviour {
     public int m_currentWeapon = 1;
     public int m_shotCount = 6;
     public int m_turretCount = 0;
+    public int m_beerNumber = 3;
     public bool m_revolver = false;
+    public float m_playerSpeed = 8f;
+    public int[] m_beerStorage;
+    public GameObject m_sBeer;
+    public GameObject m_mBeer;
+    public GameObject m_lBeer;
+    public GameObject m_oBeer;
     public GameObject m_turret;
 
 
@@ -108,6 +115,18 @@ public class GameState : MonoBehaviour {
         m_turretCount++;
     }
 
+    public void BeerCreate(int _type)
+    {
+        for (int i = 0; i < 3; i++) {
+            if (m_beerStorage[i] == 0)
+            {
+                m_beerStorage[i] = _type;
+                i = 5;
+            }
+        }
+        
+    }
+
     public void UpdateHealthUI()
     {
         m_healthBar.fillAmount = m_health / m_maxHealth;
@@ -155,6 +174,79 @@ public class GameState : MonoBehaviour {
         if(m_wave == 1)
         {
             AddANewDoor();
+        }
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControll>().m_drunkspin = 0;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+        
+
+        for(int i = 0; i < 3; i++)
+        {
+           switch(m_beerStorage[i])
+            {
+                case 0:
+                    break;
+                case 1:
+
+                    switch(i)
+                    {
+                        case 0:
+                            Instantiate(m_sBeer, new Vector3(7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 1:
+                            Instantiate(m_sBeer, new Vector3(0, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 2:
+                            Instantiate(m_sBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                    }
+                    break;
+                case 2:
+
+                    switch (i)
+                    {
+                        case 0:
+                            Instantiate(m_mBeer, new Vector3(7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 1:
+                            Instantiate(m_mBeer, new Vector3(0, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 2:
+                            Instantiate(m_mBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                    }
+                    break;
+                case 3:
+
+                    switch (i)
+                    {
+                        case 0:
+                            Instantiate(m_lBeer, new Vector3(7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 1:
+                            Instantiate(m_lBeer, new Vector3(0, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 2:
+                            Instantiate(m_lBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                    }
+                    break;
+                case 4:
+
+                    switch (i)
+                    {
+                        case 0:
+                            Instantiate(m_oBeer, new Vector3(7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 1:
+                            Instantiate(m_oBeer, new Vector3(0, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                        case 2:
+                            Instantiate(m_oBeer, new Vector3(-7, 1.3f, -5.5f), Quaternion.identity);
+                            break;
+                    }
+                    break;
+
+            }
         }
 
     }
@@ -215,6 +307,11 @@ public class GameState : MonoBehaviour {
             Debug.LogError("A GameState instance already exists!");
         }
         instance = this;
+        m_beerStorage = new int[3];
+        m_beerStorage[0] = 2;
+        m_beerStorage[1] = 2;
+        m_beerStorage[2] = 2;
+
 
     }
 }

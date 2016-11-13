@@ -27,7 +27,7 @@ public class PlayerControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        MovementSpeed = GameState.instance.m_playerSpeed;
         SpeedControl();
         GetInput();
         Drunk();
