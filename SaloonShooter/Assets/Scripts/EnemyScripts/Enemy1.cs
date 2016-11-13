@@ -9,6 +9,7 @@ public class Enemy1 : MonoBehaviour {
     private Rigidbody m_body;
     private bool m_isdead;
     private float m_deathtimer;
+    public GameObject m_boom;
 
     // Use this for initialization
     void Start () {
@@ -31,6 +32,7 @@ public class Enemy1 : MonoBehaviour {
             {
                 if (m_attacktimer <= 0)
                 {
+                    Instantiate(m_boom, m_transform.position + new Vector3(0,3), Quaternion.identity);
                     m_body.AddForce(new Vector3(0, 500f, 500f));
                     m_attacktimer = 90f;
                     m_isdead = true;
