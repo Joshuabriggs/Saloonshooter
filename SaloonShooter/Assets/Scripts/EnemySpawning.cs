@@ -22,15 +22,23 @@ public class EnemySpawning : MonoBehaviour {
 
         m_spawnGateCont = GameObject.Find("Spawn Gates");
 
-        foreach(Transform child in m_spawnGateCont.transform)
-        {
-            m_spawnPoints.Add(child);
-            Debug.Log("Added " + child.name + " to list of spawn gates.");
-        }
+        UpdateSpawnGates();
 
         //StartCoroutine(SpawnEnemy());
 
 	}
+
+    public void UpdateSpawnGates()
+    {
+
+        m_spawnPoints.Clear();
+
+        foreach (Transform child in m_spawnGateCont.transform)
+        {
+            m_spawnPoints.Add(child);
+            Debug.Log("Added " + child.name + " to list of spawn gates.");
+        }
+    }
 
     void Update()
     {

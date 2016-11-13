@@ -24,8 +24,11 @@ public class GameState : MonoBehaviour {
     float deltaHealth = 0f;
     float healthBarSpeed = 6f;
 
+    [SerializeField] Transform m_spawnGates;
+
     //GameObjects
     [SerializeField] List<GameObject> m_enemyPrefabs = new List<GameObject>();
+    [SerializeField] GameObject m_door;
 
     //Lists
     public List<EnemyMain> m_enemies = new List<EnemyMain>();
@@ -148,6 +151,20 @@ public class GameState : MonoBehaviour {
         Time.timeScale = 1f;
         m_wave ++;
         m_waveDisplay.text = "Wave: " + (m_wave+1);
+
+        if(m_wave == 1)
+        {
+            AddANewDoor();
+        }
+
+    }
+
+    void AddANewDoor()
+    {
+        GameObject newDoor = Instantiate(m_door);
+        newDoor.transform.parent = m_spawnGates.transform;
+        GetComponent<EnemySpawning>().UpdateSpawnGates();
+        Debug.Log("NEW DOOR");
     }
 
     public void SpawnEnemy(int _type, Vector3 _pos)
@@ -156,12 +173,16 @@ public class GameState : MonoBehaviour {
         m_enemies.Add(newEnemy.GetComponent<EnemyMain>());
     }
 
-    public void DestroyEnemy(EnemyMain _enemy)
+    public void DestroyEnemy(EnemyMain _enemy, bool _killed)
     {
         m_enemies.Remove(_enemy);
         Destroy(_enemy.gameObject);
 
-        AddScore(10);
+        if(_killed)
+        {
+            AddScore(10);
+        }
+        
 
     }
 
