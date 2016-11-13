@@ -25,7 +25,10 @@ public class FireProjectile : MonoBehaviour {
 
         
         
-
+        if(GameState.instance.m_revolver == false)
+        {
+            GameState.instance.m_currentWeapon = 1;
+        }
         switch(GameState.instance.m_currentWeapon)
         {
             case 1:

@@ -62,6 +62,15 @@ public class UpgradeMenu : MonoBehaviour {
 
     }
 
+    public void OnRevolverBuy()
+    {
+        if (GameState.instance.m_revolver == false)
+        {
+            GameState.instance.AddScore(-300);
+            GameState.instance.m_revolver = true;
+        }
+    }
+
     public void OnTurretCreate()
     {
         if (GameState.instance.m_turretCount < 2)
