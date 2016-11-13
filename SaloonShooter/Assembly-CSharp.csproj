@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\Twirl.cs" />
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
      <Compile Include="Assets\Scripts\ImageEffects\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\ParticleDestroy.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\CameraRotation.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\FireProjectile.cs" />

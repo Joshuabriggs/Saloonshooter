@@ -70,8 +70,7 @@ public class EnemyBoss : MonoBehaviour
 
                 if (m_deathtimer <= 0)
                 {
-                    GameState.instance.DestroyEnemy(gameObject.GetComponent<EnemyMain>());
-                    GameState.instance.AddScore(100);
+                    GameState.instance.DestroyEnemy(gameObject.GetComponent<EnemyMain>(), false);
                 }
             }
 
